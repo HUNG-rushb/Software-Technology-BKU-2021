@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
 
     <!-- <CartCard /> -->
-    <Progress :length="13" />
+    <!-- <Progress :length="13" /> -->
   </div>
 </template>
 
