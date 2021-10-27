@@ -2,8 +2,6 @@
   <div>
     <HeaderVideo />
     <Header />
-    <!-- Home -->
-
     <Footer />
   </div>
 </template>

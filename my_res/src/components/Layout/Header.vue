@@ -58,12 +58,14 @@
 
               <li class="nav-item">
                 <button type="button" class="btn btn-success">
-                  Đăng nhập
+                  <i class="bi bi-person-fill"></i> Đăng nhập
                 </button>
               </li>
 
               <li class="nav-item" id="register">
-                <button type="button" class="btn">Đăng kí</button>
+                <button type="button" class="btn">
+                  <i class="bi bi-person-plus-fill"></i> Đăng kí
+                </button>
               </li>
             </ul>
           </div>

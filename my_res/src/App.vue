@@ -2,15 +2,19 @@
   <div>
     <!-- <router-view></router-view> -->
 
-    <Test />
+    <!-- <CartCard /> -->
+    <Progress :length="13" />
   </div>
 </template>
 
 <script>
-import Test from "./views/Test.vue";
+// import Test from "./views/Test.vue";
+// import FoodCard from "./components/Menu/FoodCard.vue";
+// import CartCard from "./components/Order/CartCard.vue";
+import Progress from "./components/Order/Progress.vue";
 
 export default {
-  components: { Test },
+  components: { Progress },
 };
 </script>
 
