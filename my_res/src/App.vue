@@ -11,7 +11,7 @@
 // import Test from "./views/Test.vue";
 // import FoodCard from "./components/Menu/FoodCard.vue";
 // import CartCard from "./components/Order/CartCard.vue";
-import Progress from "./components/Order/Progress.vue";
+// import Progress from "./components/Order/Progress.vue";
 
 export default {
   components: { Progress },
