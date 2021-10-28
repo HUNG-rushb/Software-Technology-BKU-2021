@@ -1,220 +1,125 @@
 <template>
-    <div class="login-reg-panel">
-            <div class="login-info-box">
-                <h2>Have an account?</h2>
-                <p>Lorem ipsum dolor sit amet</p>
-                <label id="label-register" for="log-reg-show">Login</label>
-                <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
-            </div>
-                                
-            <div class="register-info-box">
-                <h2>Don't have an account?</h2>
-                <p>Lorem ipsum dolor sit amet</p>
-                <label id="label-login" for="log-login-show">Register</label>
-                <input type="radio" name="active-log-panel" id="log-login-show">
-            </div>
-                                
-            <div class="white-panel">
-                <div class="login-show">
-                    <h2>LOGIN</h2>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="button" value="Login">
-                    <a href="">Forgot password?</a>
-                </div>
-                <div class="register-show">
-                    <h2>REGISTER</h2>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                    <input type="button" value="Register">
-                </div>
-            </div>
-        </div>
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="" class="form-control input_user" value="" placeholder="username">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Remember me</label>
+							</div>
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="button" name="button" class="btn login_btn">Login</button>
+				   </div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<a href="#">Forgot your password?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </template>
 
-<script>
-    $(document).ready(function(){
-        $('.login-info-box').fadeOut();
-        $('.login-show').addClass('show-log-panel');
-    });
-
-    $('.login-reg-panel input[type="radio"]').on('change', function() {
-        if($('#log-login-show').is(':checked')) {
-            $('.register-info-box').fadeOut(); 
-            $('.login-info-box').fadeIn();
-            
-            $('.white-panel').addClass('right-log');
-            $('.register-show').addClass('show-log-panel');
-            $('.login-show').removeClass('show-log-panel');
-            
-        }
-        else if($('#log-reg-show').is(':checked')) {
-            $('.register-info-box').fadeIn();
-            $('.login-info-box').fadeOut();
-            
-            $('.white-panel').removeClass('right-log');
-            
-            $('.login-show').addClass('show-log-panel');
-            $('.register-show').removeClass('show-log-panel');
-        }
-    });
-
+<script> 
 export default {};
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Mukta');
-    body{
-    font-family: 'Mukta', sans-serif;
-        height:100vh;
-        min-height:550px;
-        background-image: url(http://www.planwallpaper.com/static/images/Free-Wallpaper-Nature-Scenes.jpg);
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-position:center;
-        position:relative;
-        overflow-y: hidden;
-    }
-    a{
-    text-decoration:none;
-    color:#444444;
-    }
-    .login-reg-panel{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align:center;
-        width:70%;
-        right:0;left:0;
-        margin:auto;
-        height:400px;
-        background-color: rgba(236, 48, 20, 0.9);
-    }
-    .white-panel{
-        background-color: rgba(255,255, 255, 1);
-        height:500px;
-        position:absolute;
-        top:-50px;
-        width:50%;
-        right:calc(50% - 50px);
-        transition:.3s ease-in-out;
-        z-index:0;
-        box-shadow: 0 0 15px 9px #00000096;
-    }
-    .login-reg-panel input[type="radio"]{
-        position:relative;
-        display:none;
-    }
-    .login-reg-panel{
-        color:#B8B8B8;
-    }
-    .login-reg-panel #label-login, 
-    .login-reg-panel #label-register{
-        border:1px solid #9E9E9E;
-        padding:5px 5px;
-        width:150px;
-        display:block;
-        text-align:center;
-        border-radius:10px;
-        cursor:pointer;
-        font-weight: 600;
-        font-size: 18px;
-    }
-    .login-info-box{
-        width:30%;
-        padding:0 50px;
-        top:20%;
-        left:0;
-        position:absolute;
-        text-align:left;
-    }
-    .register-info-box{
-        width:30%;
-        padding:0 50px;
-        top:20%;
-        right:0;
-        position:absolute;
-        text-align:left;
-        
-    }
-    .right-log{right:50px !important;}
+    body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			background: #A52A2A !important;
+		}
+		.user_card {
+			height: 450px;
+			width: 370px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #FAF0E6;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
 
-    .login-show, 
-    .register-show{
-        z-index: 1;
-        display:none;
-        opacity:0;
-        transition:0.3s ease-in-out;
-        color:#242424;
-        text-align:left;
-        padding:50px;
-    }
-    .show-log-panel{
-        display:block;
-        opacity:0.9;
-    }
-    .login-show input[type="text"], .login-show input[type="password"]{
-        width: 100%;
-        display: block;
-        margin:20px 0;
-        padding: 15px;
-        border: 1px solid #b5b5b5;
-        outline: none;
-    }
-    .login-show input[type="button"] {
-        max-width: 150px;
-        width: 100%;
-        background: #444444;
-        color: #f9f9f9;
-        border: none;
-        padding: 10px;
-        text-transform: uppercase;
-        border-radius: 2px;
-        float:right;
-        cursor:pointer;
-    }
-    .login-show a{
-        display:inline-block;
-        padding:10px 0;
-    }
-
-    .register-show input[type="text"], .register-show input[type="password"]{
-        width: 100%;
-        display: block;
-        margin:20px 0;
-        padding: 15px;
-        border: 1px solid #b5b5b5;
-        outline: none;
-    }
-    .register-show input[type="button"] {
-        max-width: 150px;
-        width: 100%;
-        background: #444444;
-        color: #f9f9f9;
-        border: none;
-        padding: 10px;
-        text-transform: uppercase;
-        border-radius: 2px;
-        float:right;
-        cursor:pointer;
-    }
-    .credit {
-        position:absolute;
-        bottom:10px;
-        left:10px;
-        color: #3B3B25;
-        margin: 0;
-        padding: 0;
-        font-family: Arial,sans-serif;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        z-index: 99;
-    }
-    a{
-    text-decoration:none;
-    color:#2c7715;
-    }
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #FFFFFF;
+			padding: 10px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+		.form_container {
+			margin-top: 50px;
+		}
+		.login_btn {
+			width: 100%;
+			background: #c0392b !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #c0392b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #c0392b !important;
+		}
 </style>

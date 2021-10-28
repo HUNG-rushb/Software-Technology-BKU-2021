@@ -1,9 +1,10 @@
 <template>
   <div>
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
 
     <!-- <CartCard /> -->
     <!-- <Progress :length="13" /> -->
+    <LoginRegister />
   </div>
 </template>
 
@@ -12,9 +13,10 @@
 // import FoodCard from "./components/Menu/FoodCard.vue";
 // import CartCard from "./components/Order/CartCard.vue";
 // import Progress from "./components/Order/Progress.vue";
+import LoginRegister from "./components/LoginRegister/LoginRegisterComponent.vue"
 
 export default {
-  components: { Progress },
+  components: { LoginRegister },
 };
 </script>
 
