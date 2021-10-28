@@ -1,9 +1,18 @@
 <template>
-  <div></div>
+  <div>
+    <div class="row">
+      <div class="col-md-9"><OrderGrid /></div>
+      <div class="col-md-3">Bill</div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+import OrderGrid from "../components/Order/OrderGrid.vue";
+
+export default {
+  components: { OrderGrid },
+};
 </script>
 
 <style scoped></style>

@@ -1,20 +1,40 @@
 <template>
   <div>
-    <!-- <router-view></router-view> -->
+    <main>
+      <router-view></router-view>
+    </main>
 
     <!-- <CartCard /> -->
-    <Progress :length="13" />
+    <!-- <Progress /> -->
+    <!-- <OrderGrid /> -->
+
+    <!-- <Order /> -->
   </div>
 </template>
 
 <script>
 // import Test from "./views/Test.vue";
+import Order from "./views/Order.vue";
 // import FoodCard from "./components/Menu/FoodCard.vue";
-// import CartCard from "./components/Order/CartCard.vue";
+import CartCard from "./components/Order/CartCard.vue";
 import Progress from "./components/Order/Progress.vue";
+import OrderGrid from "./components/Order/OrderGrid.vue";
 
 export default {
-  components: { Progress },
+  components: { Order, CartCard, Progress, OrderGrid },
+  data() {
+    return {
+      foods: [
+        {
+          id: "1",
+          name: "Bún bò Huế",
+          description:
+            "Bún bò là một trong những đặc sản của xứ Huế, mặc dù món bún này phổ biến trên cả ba miền ở Việt Nam và cả người Việt tại hải ngoại.",
+          img: "./assets/images/Food images/....",
+        },
+      ],
+    };
+  },
 };
 </script>
 

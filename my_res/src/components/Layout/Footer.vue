@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import GoogleMap from "./Google Map/GoogleMap.vue";
+import GoogleMap from "../Home/Google Map/GoogleMap.vue";
 // import GoogleMap from "../components/Layout/Google Map/GoogleMap.vue";
 
 export default {

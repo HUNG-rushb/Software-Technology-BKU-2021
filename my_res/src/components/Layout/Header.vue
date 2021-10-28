@@ -5,14 +5,14 @@
         <div class="container">
           <!-- LOGO -->
           <!-- <a router link></a> -->
-          <a href="" class="main-header__brand">
+          <router-link class="main-header__brand" to="/">
             <img src="../../assets/logo_final.png" alt="Món Việt" />
-            <!-- <strong>Món Việt</strong> -->
-          </a>
+          </router-link>
+
           <!-- Brand name  -->
-          <a class="main-header__brand" href="#">
+          <router-link class="main-header__brand" to="/">
             <strong>Món Việt</strong>
-          </a>
+          </router-link>
 
           <!-- Toggle button for smartphone screen  -->
           <button
@@ -33,44 +33,50 @@
             <ul class="navbar-nav mx-auto" id="navbar">
               <!-- active  -->
               <li class="nav-item">
-                <a class="nav-link" href="#home">Trang chính</a>
+                <!-- <a class="nav-link" href="#home">Trang chính</a> -->
+                <router-link class="nav-link" to="/">Trang chính</router-link>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#menu">Menu</a>
+                <!-- <a class="nav-link" href="#menu">Menu</a> -->
+                <router-link class="nav-link" to="/menu">Menu</router-link>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="#order">Đặt món</a>
+                <!-- <router-link class="nav-link" to="/order">Đặt món</router-link> -->
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="#book">Đặt bàn</a>
+                <!-- <router-link to='/book'>Đặt bàn<router-link/> -->
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Liên hệ</a>
+                <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
               </li>
 
               <li class="nav-item" id="carticon">
-                <button class="btn">Giỏ hàng <ShoppingCart /></button>
+                <!-- <button class="btn">Giỏ hàng <ShoppingCart /></button> -->
+                <router-link class="btn" to="/order">
+                  Giỏ hàng <ShoppingCart />
+                </router-link>
               </li>
 
               <li class="nav-item">
-                <button type="button" class="btn btn-success">
+                <router-link class="btn" to="/login">
                   <i class="bi bi-person-fill"></i> Đăng nhập
-                </button>
+                </router-link>
               </li>
 
               <li class="nav-item" id="register">
-                <button type="button" class="btn">
+                <router-link class="btn" to="/register">
                   <i class="bi bi-person-plus-fill"></i> Đăng kí
-                </button>
+                </router-link>
               </li>
             </ul>
           </div>
-
-          <!-- ----  -->
         </div>
       </nav>
     </header>
@@ -168,7 +174,16 @@ export default {
   right: 0;
 }
 
-#register {
+/* #register {
   right: 0;
+} */
+
+/* Highlight router link  */
+a:hover,
+a:active,
+a.active {
+  color: #f1a80a;
+  border-color: #f1a80a;
+  background-color: #1a037e;
 }
 </style>

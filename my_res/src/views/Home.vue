@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import HeaderVideo from "../components/Layout/HeaderVideo.vue";
+import HeaderVideo from "../components/Home/HeaderVideo.vue";
 import Header from "../components/Layout/Header.vue";
 import Footer from "../components/Layout/Footer.vue";
 
