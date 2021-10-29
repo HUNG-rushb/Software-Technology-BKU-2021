@@ -4,7 +4,7 @@
 
     <!-- <CartCard /> -->
     <!-- <Progress :length="13" /> -->
-    <LoginRegister />
+    <Register />
   </div>
 </template>
 
@@ -13,10 +13,10 @@
 // import FoodCard from "./components/Menu/FoodCard.vue";
 // import CartCard from "./components/Order/CartCard.vue";
 // import Progress from "./components/Order/Progress.vue";
-import LoginRegister from "./components/LoginRegister/LoginRegisterComponent.vue"
+import Register from "./components/Register/RegisterComp.vue"
 
 export default {
-  components: { LoginRegister },
+  components: { Register },
 };
 </script>
 
