@@ -8,7 +8,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Creative Colorlib SignUp Form</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Custom Theme files -->
@@ -21,12 +20,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- main -->
 	<div class="main-w3layouts wrapper">
+    <div class="brand_logo_container">
+		  <img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
+		</div>
 		<h1>Register</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-                    <input class="text name" type="text" name="Name" placeholder="Name" required="">
-					<input class="text username" type="text" name="Username" placeholder="Username" required="">
+
+          <div class="row">
+            <div class="col">
+              <input class="text firstname" type="text" name="firstname" placeholder="First name" required="">
+            </div>
+            <div class="col">
+              <input class="text lastname" type="text" name="lastname" placeholder="Last name" required="">
+            </div>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
+          
+					<input class="text username" type="text" name="username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text password" type="password" name="password" placeholder="Password" required="">
 					<input class="text confirmpassword" type="password" name="password" placeholder="Confirm Password" required="">
@@ -39,21 +59,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<input type="submit" value="SIGNUP">
 				</form>
-				<p>Already have an Account? <a href="#"> Login Now!</a></p>
+				<p class="had-account">Already have an Account? <a href="#"> Login Now!</a></p>
 			</div>
 		</div>
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
 	</div>
 	<!-- //main -->
 </body>
@@ -67,14 +75,9 @@ export default {
 </script>
 
 <style>
-/*--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 /*-- reset --*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -85,12 +88,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
-}
-
-ol, ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
 
 blockquote, q {
@@ -108,6 +105,8 @@ table {
 }
 
 /*-- start editing from here --*/
+
+
 a {
   text-decoration: none;
 }
@@ -177,16 +176,42 @@ img {
 }
 
 /*-- end reset --*/
-body {
-  background: #76b852;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #76b852, #8DC26F);
-  background: -moz-linear-gradient(to top, #76b852, #8DC26F);
-  background: -o-linear-gradient(to top, #76b852, #8DC26F);
-  background: linear-gradient(to top, #76b852, #8DC26F);
+span{
+  color: #000;
+  margin-left: 0.5em;
+}
+
+.had-account{
+  color: #000 !important;
+}
+
+body{
+  background: #A52A2A;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
+}
+
+.main-w3layouts{
+  background: #A52A2A;
+}
+
+.brand_logo_container {
+  height: 170px;
+  width: 170px;
+  top: -75px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brand_logo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 h1 {
@@ -195,7 +220,7 @@ h1 {
   color: #fff;
   font-weight: 100;
   text-transform: capitalize;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -207,7 +232,7 @@ h1 {
 .main-agileinfo {
   width: 35%;
   margin: 3em auto;
-  background: rgba(0, 0, 0, 0.18);
+  background: #FAF0E6;
   background-size: cover;
 }
 
@@ -217,26 +242,31 @@ h1 {
 
 input[type="text"], input[type="email"], input[type="password"]{
   font-size: 0.9em;
-  color: #fff;
+  /* color: #fff; */
   font-weight: 100;
   width: 94.5%;
   display: block;
   border: none;
   padding: 0.8em;
-  border: solid 1px rgba(255, 255, 255, 0.37);
-  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  /* border: solid 1px rgba(255, 255, 255, 0.37); */
+  -webkit-transition: all 0.1s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background: -webkit-linear-gradient(top, #fff 96%, #A52A2A);
+  background: linear-gradient(to bottom, #fff 96%, #A52A2A);
   background-position: -800px 0;
   background-size: 100%;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #000;
   font-family: 'Roboto', sans-serif;
 }
 
-input.text.username, input.text.password, input.text.confirmpassword{
+input.text.firstname, input.text.lastname{
+  background-color: #fff;
+}
+
+input.text.username, input.text.email, input.text.password, input.text.confirmpassword{
   margin: 2em 0;
+  background-color: #fff;
 }
 
 .text:focus, .text:valid {
@@ -245,42 +275,17 @@ input.text.username, input.text.password, input.text.confirmpassword{
   background-position: 0 0;
 }
 
-.text:focus::-webkit-input-placeholder, .text:valid::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: .9em;
-  -webkit-transform: translateY(-30px);
-  -moz-transform: translateY(-30px);
-  -o-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
-  visibility: visible !important;
-}
-
 ::-webkit-input-placeholder {
-  color: #fff;
+  color: #A9A9A9;
   font-weight: 100;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #fff;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #fff;
-}
-
-:-ms-input-placeholder {
-  color: #fff;
 }
 
 input[type="submit"] {
   font-size: .9em;
   color: #fff;
-  background: #76b852;
+  background: #A52A2A;
   outline: none;
-  border: 1px solid #76b852;
+  border: 1px solid #A52A2A;
   cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
@@ -295,7 +300,7 @@ input[type="submit"]:hover {
   -o-transition: .5s all;
   -ms-transition: .5s all;
   transition: .5s all;
-  background: #8DC26F;
+  background: #FF0000;
 }
 
 .agileits-top p {
@@ -314,8 +319,12 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
+.had-account a{
+  color: #A52A2A !important;
+}
+
 .agileits-top p a:hover {
-  color: #76b852;
+  color: #FF0000 !important;
 }
 
 /*-- //main --*/
@@ -329,7 +338,7 @@ input[type="submit"]:hover {
 }
 
 input.checkbox {
-  background: #8DC26F;
+  background: #fff;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
@@ -352,7 +361,7 @@ input.checkbox:after {
   z-index: 1;
   width: 1.2em;
   height: 1.2em;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   -webkit-transition: .4s ease-in-out;
   -moz-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
@@ -366,7 +375,7 @@ input.checkbox:checked:after {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   height: .5rem;
-  border-color: #fff;
+  border-color: #000;
   border-top-color: transparent;
   border-right-color: transparent;
 }
@@ -386,216 +395,15 @@ input.checkbox:checked:after {
 
 @keyframes rippling {
   50% {
-    border-left-color: #fff;
+    border-left-color: #000;
   }
 
   100% {
-    border-bottom-color: #fff;
-    border-left-color: #fff;
+    border-bottom-color: #000;
+    border-left-color: #000;
   }
 }
-
 /*-- //checkbox --*/
-/*-- copyright --*/
-.colorlibcopy-agile {
-  margin: 2em 0 1em;
-  text-align: center;
-}
-
-.colorlibcopy-agile p {
-  font-size: .9em;
-  color: #fff;
-  line-height: 1.8em;
-  letter-spacing: 1px;
-  font-weight: 100;
-}
-
-.colorlibcopy-agile p a {
-  color: #fff;
-  transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-}
-
-.colorlibcopy-agile p a:hover {
-  color: #000;
-}
-
-/*-- //copyright --*/
-.wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.colorlib-bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.colorlib-bubbles li {
-  position: absolute;
-  list-style: none;
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.15);
-  bottom: -160px;
-  -webkit-animation: square 20s infinite;
-  -moz-animation: square 250s infinite;
-  -o-animation: square 20s infinite;
-  -ms-animation: square 20s infinite;
-  animation: square 20s infinite;
-  -webkit-transition-timing-function: linear;
-  -moz-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  -ms-transition-timing-function: linear;
-  transition-timing-function: linear;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.colorlib-bubbles li:nth-child(1) {
-  left: 10%;
-}
-
-.colorlib-bubbles li:nth-child(2) {
-  left: 20%;
-  width: 80px;
-  height: 80px;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-duration: 17s;
-  -moz-animation-duration: 17s;
-  -o-animation-duration: 17s;
-  animation-duration: 17s;
-}
-
-.colorlib-bubbles li:nth-child(3) {
-  left: 25%;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -o-animation-delay: 4s;
-  -ms-animation-delay: 4s;
-  animation-delay: 4s;
-}
-
-.colorlib-bubbles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation-duration: 22s;
-  -moz-animation-duration: 22s;
-  -o-animation-duration: 22s;
-  -ms-animation-duration: 22s;
-  animation-duration: 22s;
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-.colorlib-bubbles li:nth-child(5) {
-  left: 70%;
-}
-
-.colorlib-bubbles li:nth-child(6) {
-  left: 80%;
-  width: 120px;
-  height: 120px;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  animation-delay: 3s;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.colorlib-bubbles li:nth-child(7) {
-  left: 32%;
-  width: 160px;
-  height: 160px;
-  -webkit-animation-delay: 7s;
-  -moz-animation-delay: 7s;
-  -o-animation-delay: 7s;
-  -ms-animation-delay: 7s;
-  animation-delay: 7s;
-}
-
-.colorlib-bubbles li:nth-child(8) {
-  left: 55%;
-  width: 20px;
-  height: 20px;
-  -webkit-animation-delay: 15s;
-  -moz-animation-delay: 15s;
-  animation-delay: 15s;
-  -webkit-animation-duration: 40s;
-  -moz-animation-duration: 40s;
-  animation-duration: 40s;
-}
-
-.colorlib-bubbles li:nth-child(9) {
-  left: 25%;
-  width: 10px;
-  height: 10px;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-duration: 40s;
-  animation-duration: 40s;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.colorlib-bubbles li:nth-child(10) {
-  left: 90%;
-  width: 160px;
-  height: 160px;
-  -webkit-animation-delay: 11s;
-  animation-delay: 11s;
-}
-
-@-webkit-keyframes square {
-  0% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(-700px) rotate(600deg);
-    -moz-transform: translateY(-700px) rotate(600deg);
-    -o-transform: translateY(-700px) rotate(600deg);
-    -ms-transform: translateY(-700px) rotate(600deg);
-    transform: translateY(-700px) rotate(600deg);
-  }
-}
-
-@keyframes square {
-  0% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    -webkit-transform: translateY(-700px) rotate(600deg);
-    -moz-transform: translateY(-700px) rotate(600deg);
-    -o-transform: translateY(-700px) rotate(600deg);
-    -ms-transform: translateY(-700px) rotate(600deg);
-    transform: translateY(-700px) rotate(600deg);
-  }
-}
 
 /*-- responsive-design --*/
 @media(max-width:1440px) {
