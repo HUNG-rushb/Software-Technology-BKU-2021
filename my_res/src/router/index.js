@@ -2,12 +2,13 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Menu from "../views/Menu.vue";
 import Order from "../views/Order.vue";
-import Error_404 from "../views/Menu.vue";
+import Error_404 from "../views/Page_404.vue";
 import Test from "../views/Test.vue";
 
 const routes = [
+  { path: "/", redirect: "/home" },
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     components: { default: Home },
   },
@@ -30,12 +31,28 @@ const routes = [
     path: "/order",
     name: "Order",
     components: { default: Order },
+    // children: [
+    //   {
+    //     name: "your-cart",
+    //     path: ":teamId",
+    //     component: TeamMembers,
+    //     props: true,
+    //   }, // /teams/t1
+    //   {
+    //     name: "destination",
+    //     path: ":teamId",
+    //     component: TeamMembers,
+    //     props: true,
+    //   }, // /teams/t1
+    //   {
+    //     name: "confirm",
+    //     path: ":teamId",
+    //     component: TeamMembers,
+    //     props: true,
+    //   }, // /teams/t1
+    // ],
   },
-  {
-    path: "/error404",
-    name: "Error_404",
-    components: { default: Error_404 },
-  },
+  { path: "/:notFound(.*)", component: Error_404 },
   {
     path: "/test",
     name: "Test",

@@ -9,12 +9,12 @@
 
         <p class="card-text">
           <!-- {{ description }} -->
-          Bún bò giò heo
+          Bún bò Huế
         </p>
 
         <span class="badge rounded-pill bg-success">20.000 đồng</span>
 
-        <button class="btn btn-success shine">
+        <button class="btn btn-success shine" @click="addItemHandler">
           <i class="bi bi-cart-fill"></i> Mua
         </button>
 
@@ -26,16 +26,41 @@
 
 <script>
 import Button from "../shared/Button.vue";
+import { inject } from "vue";
 
 export default {
-  // props: {},
+  emits: ["add-item"],
+
+  setup() {
+    const emitter = inject("emitter"); // Inject `emitter`
+    const addItem = () => {
+      emitter.emit("add-item");
+    };
+
+    return {
+      addItem,
+    };
+  },
+
+  methods: {
+    addItemHandler() {
+      // const emitter = inject("emitter"); // Inject `emitter`
+      // emitter.emit("add-item");
+      this.addItem();
+    },
+  },
+
   components: { Button },
+  mounted() {},
+  // setup(){
+  //   const emitter = inject("emitter"); // Inject `emitter`
+  // }
 };
 </script>
 
 <style scoped>
 .card {
-  width: 18rem;
+  /* width: 18rem; */
   display: block;
 }
 
@@ -67,7 +92,6 @@ button {
 }
 
 .shine:hover {
-  /* transform: scale(1.05) rotate(-2.5deg); */
   transform: scale(1.05);
 }
 
@@ -91,5 +115,17 @@ button {
   left: 0;
   animation: shine 200ms linear;
   transform: translateX(250px) rotate(-25deg);
+}
+
+.btn {
+  display: block;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

@@ -28,11 +28,11 @@
             <!-- https://shaack.com/projekte/bootstrap-input-spinner/ -->
             <input
               type="number"
-              value="1"
               min="1"
               max="100"
               step="1"
               id="numberinput"
+              v-model="quantity"
             />
 
             <!-- Delete Button  -->
@@ -49,7 +49,13 @@
 <script>
 // $("input[type='number']").inputSpinner();
 
-export default {};
+export default {
+  data() {
+    return {
+      quantity: null,
+    };
+  },
+};
 </script>
 
 <style scoped>

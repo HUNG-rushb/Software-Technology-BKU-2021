@@ -2,6 +2,8 @@
   <div loading="lazy">
     <GoogleMap />
 
+    <BackToTop />
+
     <footer class="footer-distributed" data-aos="zoom-in-up">
       <div class="footer-left">
         <h3>Món Việt</h3>
@@ -52,10 +54,11 @@
 
 <script>
 import GoogleMap from "../Home/Google Map/GoogleMap.vue";
+import BackToTop from "./BackToTop.vue";
 // import GoogleMap from "../components/Layout/Google Map/GoogleMap.vue";
 
 export default {
-  components: { GoogleMap },
+  components: { GoogleMap, BackToTop },
 };
 </script>
 

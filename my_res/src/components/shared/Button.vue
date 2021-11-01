@@ -1,7 +1,7 @@
 <template>
   <div>
     <button class="btn btn-success shine">
-      <i class="bi bi-cart-fill"></i> {{ text }}
+      {{ text }}
     </button>
   </div>
 </template>
