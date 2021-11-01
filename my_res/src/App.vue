@@ -1,20 +1,44 @@
 <template>
   <div>
-    <router-view></router-view>
 
-    <!-- <CartCard /> -->
-    <!-- <Progress :length="13" /> -->
+    <main>
+      <router-view />
+    </main>
+
+    <!-- <Progress /> -->
+    <!-- <OrderGrid /> -->
+
+    <!-- <Order /> -->
+    <!-- <HomeMenu /> -->
+    <!-- <AddToast /> -->
+
   </div>
 </template>
 
 <script>
-// import Test from "./views/Test.vue";
-// import FoodCard from "./components/Menu/FoodCard.vue";
-// import CartCard from "./components/Order/CartCard.vue";
-// import Progress from "./components/Order/Progress.vue";
+
+import Order from "./views/Order.vue";
+
+import OrderGrid from "./components/Order/OrderGrid.vue";
+import HomeMenu from "./components/Home/HomeMenu.vue";
+
+import Progress from "./components/Order/Progress.vue";
 
 export default {
-  components: { Progress },
+  components: { HomeMenu, Order, Progress, OrderGrid },
+  data() {
+    return {
+      foods: [
+        {
+          id: "1",
+          name: "Bún bò Huế",
+          description:
+            "Bún bò là một trong những đặc sản của xứ Huế, mặc dù món bún này phổ biến trên cả ba miền ở Việt Nam và cả người Việt tại hải ngoại.",
+          img: "./assets/images/Food images/....",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -27,10 +51,10 @@ export default {
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:100,400,900");
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700"); */
-
 /* #8e9189, #494449, #857f74, #eeefeb, #ddeac1  */
 * {
   box-sizing: border-box;
+  /* display: block; */
 }
 
 html {

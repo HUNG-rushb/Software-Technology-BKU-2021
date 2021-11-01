@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import GridMenu from "../components/Menu/GridMenu.vue";
+// import GridMenu from "../components/Menu/GridMenu.vue";
 
 export default {
-  components: { GridMenu },
+  // components: { GridMenu },
 };
 </script>
 
