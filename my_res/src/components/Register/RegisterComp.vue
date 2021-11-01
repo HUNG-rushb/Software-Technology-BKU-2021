@@ -23,44 +23,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="brand_logo_container">
 		  <img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
 		</div>
-		<h1>Register</h1>
+		<h1>Đăng ký</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
 
           <div class="row">
             <div class="col">
-              <input class="text firstname" type="text" name="firstname" placeholder="First name" required="">
+              <input class="text firstname" type="text" name="firstname" placeholder="Họ" required="">
             </div>
             <div class="col">
-              <input class="text lastname" type="text" name="lastname" placeholder="Last name" required="">
+              <input class="text lastname" type="text" name="lastname" placeholder="Tên" required="">
             </div>
           </div>
 
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Male</label>
+            <label class="form-check-label" for="inlineRadio1">Nam</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
+            <label class="form-check-label" for="inlineRadio2">Nữ</label>
           </div>
           
         	<input class="text email" type="email" name="email" placeholder="Email" required="">
-          <input class="tel phone-number" type="tel" name="phone-number" placeholder="Phone number" required="">
-					<input class="text username" type="text" name="username" placeholder="Username" required="">
-					<input class="text password" type="password" name="password" placeholder="Password" required="">
-					<input class="text confirmpassword" type="password" name="password" placeholder="Confirm Password" required="">
+          <input class="tel phone-number" type="tel" name="phone-number" placeholder="Số điện thoại di động" required="">
+					<input class="text username" type="text" name="username" placeholder="Tên tài khoản" required="">
+					<input class="text password" type="password" name="password" placeholder="Mật khẩu" required="">
+					<input class="text confirmpassword" type="password" name="password" placeholder="Nhập lại mật khẩu" required="">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
-							<span>I Agree To The Terms & Conditions</span>
+							<span>Tôi đồng ý với điều khoản sử dụng của nhà hàng</span>
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGN UP">
+					<input type="submit" value="Đăng ký">
 				</form>
-				<p class="had-account">Already have an Account? <a href="#"> Login Now!</a></p>
+				<p class="had-account">Đã có tài khoản? <a href="#"> Đăng nhập ngay!</a></p>
 			</div>
 		</div>
 	</div>

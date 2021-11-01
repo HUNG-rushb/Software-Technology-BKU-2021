@@ -23,23 +23,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="brand_logo_container">
 		  <img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
 		</div>
-		<h1>Login</h1>
+		<h1>Đăng nhập</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-					<input class="text username" type="text" name="username" placeholder="Username" required="">
-					<input class="text password" type="password" name="password" placeholder="Password" required="">
+					<input class="text username" type="text" name="username" placeholder="Tên tài khoản" required="">
+					<input class="text password" type="password" name="password" placeholder="Mật khẩu" required="">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
-							<span>Remember me</span>
+							<span>Ghi nhớ đăng nhập</span>
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="LOGIN">
+					<input type="submit" value="Đăng nhập">
 				</form>
-				<p class="had-account">Don't have an account? <a href="#"> Register Now!</a></p>
-				<p class="forgot-password"> <a href="#"> Forgot password</a></p>
+				<p class="had-account">Không có tài khoản? <a href="#"> Đăng ký ngay!</a></p>
+				<p class="forgot-password"> <a href="#"> Quên mật khẩu</a></p>
 			</div>
 		</div>
 	</div>
@@ -200,7 +200,7 @@ h1 {
   color: #fff;
   font-weight: 100;
   text-transform: capitalize;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: 'Roboto', sans-serif;
 }
 

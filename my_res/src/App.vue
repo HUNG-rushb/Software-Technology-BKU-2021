@@ -13,7 +13,7 @@
 // import FoodCard from "./components/Menu/FoodCard.vue";
 // import CartCard from "./components/Order/CartCard.vue";
 // import Progress from "./components/Order/Progress.vue";
-import Register from "./components/Register/RegisterComp.vue"
+import Register from "./components/Login/LoginComp.vue"
 
 export default {
   components: { Register },
