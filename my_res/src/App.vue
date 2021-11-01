@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <main>
       <router-view />
     </main>
@@ -10,10 +11,12 @@
     <!-- <Order /> -->
     <!-- <HomeMenu /> -->
     <!-- <AddToast /> -->
+
   </div>
 </template>
 
 <script>
+
 import Order from "./views/Order.vue";
 
 import OrderGrid from "./components/Order/OrderGrid.vue";
