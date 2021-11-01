@@ -4,7 +4,7 @@
       <div class="row g-0">
         <div class="col-md-4">
           <img
-            src="../../assets/logo.jpg"
+            src="../../assets/Order/bunbo.jpg"
             class="img-fluid rounded-start"
             alt="..."
           />
@@ -28,11 +28,11 @@
             <!-- https://shaack.com/projekte/bootstrap-input-spinner/ -->
             <input
               type="number"
-              value="1"
               min="1"
               max="100"
               step="1"
               id="numberinput"
+              v-model="quantity"
             />
 
             <!-- Delete Button  -->
@@ -49,15 +49,23 @@
 <script>
 // $("input[type='number']").inputSpinner();
 
-export default {};
+export default {
+  data() {
+    return {
+      quantity: null,
+    };
+  },
+};
 </script>
 
 <style scoped>
 .card {
   border: 2px solid #494449;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to bottom right, #8e9189, #ddeac1);
-  width: 120%;
+  background-image: url("../../assets/Order/lotus.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {

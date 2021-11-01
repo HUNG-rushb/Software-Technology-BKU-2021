@@ -13,10 +13,10 @@
     "bootstrap-icons": "^1.6.1",
     "bootstrap-input-spinner": "^3.1.7",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0",
+    "mitt": "^3.0.0",
+    "portal-vue": "^2.1.7",
+    "vue": "^3.2.20",
     "vue-router": "^4.0.0-0",
-    "vue-step-progress": "^0.3.7",
-    "vue-step-progress-indicator": "^1.0.2",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
