@@ -46,8 +46,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <label class="form-check-label" for="inlineRadio2">Female</label>
           </div>
           
+        	<input class="text email" type="email" name="email" placeholder="Email" required="">
+          <input class="tel phone-number" type="tel" name="phone-number" placeholder="Phone number" required="">
 					<input class="text username" type="text" name="username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text password" type="password" name="password" placeholder="Password" required="">
 					<input class="text confirmpassword" type="password" name="password" placeholder="Confirm Password" required="">
 					<div class="wthree-text">
@@ -57,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+					<input type="submit" value="SIGN UP">
 				</form>
 				<p class="had-account">Already have an Account? <a href="#"> Login Now!</a></p>
 			</div>
@@ -240,7 +241,7 @@ h1 {
   padding: 3em;
 }
 
-input[type="text"], input[type="email"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
   font-size: 0.9em;
   /* color: #fff; */
   font-weight: 100;
@@ -260,16 +261,16 @@ input[type="text"], input[type="email"], input[type="password"]{
   font-family: 'Roboto', sans-serif;
 }
 
-input.text.firstname, input.text.lastname{
+input.text.firstname, input.text.lastname, input.text.password, input.tel.phone-number{
   background-color: #fff;
 }
 
-input.text.username, input.text.email, input.text.password, input.text.confirmpassword{
+input.text.username, input.text.email, input.text.confirmpassword{
   margin: 2em 0;
   background-color: #fff;
 }
 
-.text:focus, .text:valid {
+.text:focus, .text:valid, .tel:focus, .tel:valid{
   box-shadow: none;
   outline: none;
   background-position: 0 0;
@@ -291,7 +292,7 @@ input[type="submit"] {
   -webkit-appearance: none;
   width: 100%;
   margin: 2em 0;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 input[type="submit"]:hover {
@@ -300,31 +301,27 @@ input[type="submit"]:hover {
   -o-transition: .5s all;
   -ms-transition: .5s all;
   transition: .5s all;
-  background: #FF0000;
+  background: #8B0000;
 }
 
-.agileits-top p {
+.had-account{
   font-size: 1em;
-  color: #fff;
+  color: #000;
   text-align: center;
   letter-spacing: 1px;
   font-weight: 300;
 }
 
-.agileits-top p a {
-  color: #fff;
+.had-account a {
+  color: #A52A2A;
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
   transition: .5s all;
   font-weight: 400;
 }
 
-.had-account a{
-  color: #A52A2A !important;
-}
-
-.agileits-top p a:hover {
-  color: #FF0000 !important;
+.had-account a:hover {
+  color: #8B0000;
 }
 
 /*-- //main --*/
@@ -407,7 +404,7 @@ input.checkbox:checked:after {
 
 /*-- responsive-design --*/
 @media(max-width:1440px) {
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
     width: 94%;
   }
 }
@@ -463,7 +460,7 @@ input.checkbox:checked:after {
     width: 58%;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
     width: 93%;
   }
 }
@@ -525,7 +522,7 @@ input.checkbox:checked:after {
     padding: 1.8em;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
     width: 91%;
   }
 
@@ -601,7 +598,7 @@ input.checkbox:checked:after {
     margin: 0 0 1em;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
     width: 89.5%;
     font-size: 0.85em;
   }
