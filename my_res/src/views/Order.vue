@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Progress />
+    <!-- <Progress /> -->
 
-    <!-- <router-view /> -->
+    <router-view />
 
-    <YourCart v-if="currentPage === 1" />
+    <!-- <YourCart v-if="currentPage === 1" /> -->
 
-    <Destination v-else-if="currentPage === 2" />
+    <!-- <Destination v-else-if="currentPage === 2" /> -->
   </div>
 </template>
 

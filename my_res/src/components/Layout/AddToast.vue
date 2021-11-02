@@ -1,9 +1,5 @@
 <template>
   <div>
-    <!-- <button @click="alertToast" type="button" class="btn btn-primary">
-      Show toast
-    </button> -->
-
     <div class="toast-container">
       <div
         id="liveToast"
@@ -30,9 +26,10 @@
 </template>
 
 <script>
-import "bootstrap/dist/js/bootstrap.min.js";
 import { inject } from "vue";
-import { Toast } from "bootstrap/dist/js/bootstrap.esm.min.js";
+import { Toast } from "bootstrap";
+// import { Toast } from "bootstrap/dist/js/bootstrap.esm.min.js"; Double bootstrap error
+// 0:42 2/11/2021
 
 export default {
   setup() {
@@ -41,8 +38,8 @@ export default {
     const emitter = inject("emitter"); // Inject `emitter`
 
     const alertToast = () => {
-      var toastLiveExample = document.getElementById("liveToast");
-      var toast = new Toast(toastLiveExample);
+      var toastLive = document.getElementById("liveToast");
+      var toast = new Toast(toastLive);
       toast.show();
     };
 
@@ -50,14 +47,9 @@ export default {
       alertToast();
     });
   },
-
   methods: {},
-
-  mounted() {
-    // Array.from(document.querySelectorAll(".toast")).forEach(
-    //   (toastNode) => new Toast(toastNode)
-    // );
-  },
+  computed: {},
+  mounted() {},
 };
 </script>
 

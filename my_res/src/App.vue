@@ -1,22 +1,14 @@
 <template>
   <div>
-    <!-- <router-view></router-view> -->
-
-    <!-- <CartCard /> -->
-    <!-- <Progress :length="13" /> -->
-    <Register />
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
 <script>
-// import Test from "./views/Test.vue";
-// import FoodCard from "./components/Menu/FoodCard.vue";
-// import CartCard from "./components/Order/CartCard.vue";
-// import Progress from "./components/Order/Progress.vue";
-import Register from "./components/Login/LoginComp.vue"
-
 export default {
-  components: { Register },
+  components: {},
 };
 </script>
 

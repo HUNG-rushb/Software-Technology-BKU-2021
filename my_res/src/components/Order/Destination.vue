@@ -89,7 +89,7 @@
               :key="index"
               value="{{item.name_with_type}}"
             >
-              {{ item.key }} - {{ item.name_with_type }}
+              {{ item.name_with_type }}
               <!-- {{ item.name_with_type }} -->
             </option>
 
@@ -116,8 +116,16 @@
             required
             v-model="recvWard"
           >
-            <option selected></option>
             <option value="test"></option>
+
+            <!-- <option
+              v-for="(item, index) in selectedDistrict.wards"
+              :key="index"
+              value="{{item.name_with_type}}"
+            >
+              {{ item.name_with_type }}
+
+            </option> -->
           </select>
 
           <label for="recvWard">Phường</label>
@@ -152,7 +160,14 @@ export default {
   methods: {
     submitForm() {},
   },
-  computed: {},
+  computed: {
+    // selectedDistrict() {
+    //   return tphcm.find(
+    //     // inventory.find( ({ name }) => name === 'cherries' );
+    //     ({ name_with_type }) => name_with_type === recvDistrict
+    //   );
+    // },
+  },
   watch: {},
 };
 </script>
