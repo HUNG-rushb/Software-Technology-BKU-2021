@@ -4,13 +4,13 @@
 
     <HeaderVideo />
 
-    <CheckCart />
-
     <AddToast />
 
     <HomeMenu />
 
     <Footer />
+
+    <CheckCart />
   </div>
 </template>
 

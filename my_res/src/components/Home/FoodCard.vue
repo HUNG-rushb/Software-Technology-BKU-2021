@@ -29,10 +29,9 @@ import Button from "../shared/Button.vue";
 import { inject } from "vue";
 
 export default {
-  emits: ["add-item"],
-
   setup() {
-    const emitter = inject("emitter"); // Inject `emitter`
+    const emitter = inject("emitter");
+
     const addItem = () => {
       emitter.emit("add-item");
     };
@@ -41,12 +40,13 @@ export default {
       addItem,
     };
   },
-
   methods: {
     addItemHandler() {
-      // const emitter = inject("emitter"); // Inject `emitter`
-      // emitter.emit("add-item");
       this.addItem();
+      this.$store.commit({
+        type: "insertItem",
+        test: "example",
+      });
     },
   },
 

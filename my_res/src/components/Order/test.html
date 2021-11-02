@@ -19,128 +19,77 @@
     <!-- .  -->
     <!-- .  -->
     <!-- .  -->
-    <form class="row g-3 needs-validation was-validated" novalidate="">
-      <div class="col-md-4">
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="recvName"
-            placeholder="name@example.com"
-            required
-          />
-          <label for="recvName">Họ tên người nhận</label>
+    <nav class="navbar fixed-top navbar-expand-lg shadow-lg main-header">
+      <div class="container">
+        <!-- LOGO -->
+        <!-- <a router link></a> -->
+        <router-link class="main-header__brand" to="/">
+          <img src="../../assets/logo_final.png" alt="Món Việt" />
+        </router-link>
+
+        <!-- Brand name  -->
+        <router-link class="main-header__brand" to="/">
+          <strong>Món Việt</strong>
+        </router-link>
+
+        <!-- Toggle button for smartphone screen  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i class="bi bi-chevron-compact-down"></i>
+        </button>
+
+        <!-- Navigation bar  -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto" id="navbar">
+            <!-- active  -->
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#home">Trang chính</a> -->
+              <router-link class="nav-link" to="/">Trang chính</router-link>
+            </li>
+
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#menu">Menu</a> -->
+              <router-link class="nav-link" to="/menu">Menu</router-link>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#order">Đặt món</a>
+              <!-- <router-link class="nav-link" to="/order">Đặt món</router-link> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#book">Đặt bàn</a>
+              <!-- <router-link to='/book'>Đặt bàn<router-link/> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Liên hệ</a>
+              <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
+            </li>
+
+            <li class="nav-item">
+              <router-link class="btn" to="/login">
+                <i class="bi bi-person-fill"></i> Đăng nhập
+              </router-link>
+            </li>
+
+            <li class="nav-item" id="register">
+              <router-link class="btn" to="/register">
+                <i class="bi bi-person-plus-fill"></i> Đăng kí
+              </router-link>
+            </li>
+          </ul>
         </div>
-
-        <!-- <label for="validationCustom01" class="form-label">First name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustom01"
-          required
-        /> -->
-        <div class="valid-feedback"></div>
       </div>
-
-      <div class="col-md-4">
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="recvEmail"
-            placeholder="name@example.com"
-            required
-          />
-          <label for="recvEmail">Địa chỉ Email</label>
-
-          <div id="emailHelp" class="form-text">
-            Chúng tôi sẽ không chia sẻ email của bạn cho bất cứ ai.
-          </div>
-        </div>
-
-        <div class="valid-feedback"></div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating mb-3">
-          <input
-            type="tel"
-            class="form-control"
-            id="recvTel"
-            placeholder="name@example.com"
-            required
-          />
-          <label for="recvTel">Số điện thoại</label>
-
-          <div id="emailHelp" class="form-text">
-            Chúng tôi sẽ không chia sẻ số điện thoại của bạn cho bất cứ ai.
-          </div>
-        </div>
-
-        <div class="invalid-feedback"></div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="recvAddr"
-            placeholder="name@example.com"
-            required
-          />
-          <label for="recvAddr">Số nhà, đường</label>
-        </div>
-
-        <div class="invalid-feedback"></div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating">
-          <select
-            class="form-select"
-            id="recvDistrict"
-            aria-label="Floating label select example"
-            required
-          >
-            <option selected></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-          </select>
-
-          <label for="recvDistrict">Quận</label>
-
-          <div id="emailHelp" class="form-text">
-            Nhà hàng chỉ phục vụ trên địa bàn Thành phố Hồ Chí Minh.
-          </div>
-        </div>
-
-        <div class="invalid-feedback"></div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating">
-          <select
-            class="form-select"
-            id="recvWard"
-            aria-label="Floating label select example"
-            required
-          >
-            <option selected></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-          </select>
-
-          <label for="recvWard">Phường</label>
-        </div>
-
-        <div class="invalid-feedback"></div>
-      </div>
-
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Tiếp tục</button>
-      </div>
-    </form>
+    </nav>
 
     <!-- -  -->
     <!-- -  -->

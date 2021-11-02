@@ -1,10 +1,7 @@
 <template>
-  <!-- data-aos="fade-right" -->
+  <!-- data-aos="fade-right" fixed-top-->
   <div>
-    <nav
-      class="navbar fixed-top navbar-expand-lg shadow-lg main-header"
-      data-aos="fade-right"
-    >
+    <nav class="navbar fixed-top navbar-expand-lg shadow-lg main-header">
       <div class="container">
         <!-- LOGO -->
         <!-- <a router link></a> -->
@@ -96,7 +93,6 @@ export default {
 
 /* Brand  */
 .main-header__brand {
-  /* color: #0e4f1f; */
   text-decoration: none;
   color: #494449;
   font: 3rem;
@@ -162,20 +158,14 @@ export default {
   color: #ddeac1;
 }
 
-/* #carticon {
-  border: 1px solid #494449;
-
-  right: 0;
-} */
-
 /* #register {
   right: 0;
 } */
 
 /* Highlight router link  */
-a:hover,
+/* a:hover,
 a:active,
 a.active {
   border-color: #f1a80a;
-}
+} */
 </style>

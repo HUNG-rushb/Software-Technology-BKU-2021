@@ -18,7 +18,7 @@
       aria-labelledby="offcanvasRightLabel"
     >
       <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+        <h5 id="offcanvasRightLabel">Giỏ hàng của bạn</h5>
 
         <button
           type="button"

@@ -1,13 +1,18 @@
 <template>
   <div class="cart">
     <i class="bi bi-cart-fill"></i>
-    <span class="badge bg-danger" id="cart_count"> 5 </span>
+    <span class="badge bg-danger" id="cart_count"> {{ counter }} </span>
   </div>
 </template>
 
 <script>
 export default {
   //   props: { count: Number },
+  computed: {
+    counter() {
+      return this.$store.getters.finalItemCount;
+    },
+  },
 };
 </script>
 

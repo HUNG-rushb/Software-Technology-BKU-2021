@@ -1,7 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Register from "../views/Register.vue";
 import Menu from "../views/Menu.vue";
+
 import Order from "../views/Order.vue";
+import YourCart from "../components/Order/YourCart.vue";
+import Destination from "../components/Order/Destination.vue";
+import ConfirmOrder from "../components/Order/ConfirmOrder.vue";
+
 import Error_404 from "../views/Page_404.vue";
 import Test from "../views/Test.vue";
 
@@ -17,40 +24,37 @@ const routes = [
     name: "Menu",
     components: { default: Menu },
   },
-  // {
-  //   path: "/login",
-  //   name: "Login",
-  //   components: { default: Login },
-  // },
-  // {
-  //   path: "/register",
-  //   name: "Register",
-  //   components: { default: Register },
-  // },
+  {
+    path: "/login",
+    name: "Login",
+    components: { default: Login },
+  },
+  {
+    path: "/register",
+    name: "Register",
+    components: { default: Register },
+  },
   {
     path: "/order",
     name: "Order",
     components: { default: Order },
-    // children: [
-    //   {
-    //     name: "your-cart",
-    //     path: ":teamId",
-    //     component: TeamMembers,
-    //     props: true,
-    //   }, // /teams/t1
-    //   {
-    //     name: "destination",
-    //     path: ":teamId",
-    //     component: TeamMembers,
-    //     props: true,
-    //   }, // /teams/t1
-    //   {
-    //     name: "confirm",
-    //     path: ":teamId",
-    //     component: TeamMembers,
-    //     props: true,
-    //   }, // /teams/t1
-    // ],
+    children: [
+      {
+        name: "your-cart",
+        path: "/order/yourcart",
+        component: YourCart,
+      },
+      {
+        name: "destination",
+        path: "/order/destination",
+        component: Destination,
+      },
+      {
+        name: "confirm",
+        path: "/order/confirmorder",
+        component: ConfirmOrder,
+      },
+    ],
   },
   { path: "/:notFound(.*)", component: Error_404 },
   {
