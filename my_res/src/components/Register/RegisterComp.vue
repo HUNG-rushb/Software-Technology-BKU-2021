@@ -60,7 +60,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<input type="submit" value="Đăng ký">
 				</form>
-				<p class="had-account">Đã có tài khoản? <a href="#"> Đăng nhập ngay!</a></p>
+				<p class="had-account">Đã có tài khoản? <a href="/login"> Đăng nhập ngay!</a></p>
+        <p class="back-to-home"> <a href="/home"> Về trang chủ</a></p>
 			</div>
 		</div>
 	</div>
@@ -71,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 export default {
-
+  name: "RegisterComp"
 }
 </script>
 
@@ -182,10 +183,6 @@ span{
   margin-left: 0.5em;
 }
 
-.had-account{
-  color: #000 !important;
-}
-
 body{
   background: #A52A2A;
   background-size: cover;
@@ -208,6 +205,7 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
 .brand_logo {
   height: 150px;
   width: 150px;
@@ -241,6 +239,15 @@ h1 {
   padding: 3em;
 }
 
+.form-check{
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+}
+
+.form-check-label{
+  margin-right: 1.5em;
+}
+
 input[type="text"], input[type="email"], input[type="password"], input[type="tel"]{
   font-size: 0.9em;
   /* color: #fff; */
@@ -259,6 +266,36 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
   background-repeat: no-repeat;
   color: #000;
   font-family: 'Roboto', sans-serif;
+}
+
+.form-check-input {
+    width: 1em;
+    height: 1em;
+    margin-top: 0.25em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.form-check-input[type=radio] {
+    border-radius: 50%;
+}
+
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+
+.form-check-input[type=radio] {
+    border-radius: 50%;
 }
 
 input.text.firstname, input.text.lastname, input.text.password, input.tel.phone-number{
@@ -310,9 +347,18 @@ input[type="submit"]:hover {
   text-align: center;
   letter-spacing: 1px;
   font-weight: 300;
+  margin-bottom: 0.5em;
 }
 
-.had-account a {
+.back-to-home{
+  font-size: 1em;
+  color: #000;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.had-account a, .back-to-home a{
   color: #A52A2A;
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
@@ -320,7 +366,7 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
-.had-account a:hover {
+.had-account a:hover, .back-to-home a:hover{
   color: #8B0000;
 }
 

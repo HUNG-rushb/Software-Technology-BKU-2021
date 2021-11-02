@@ -4,6 +4,9 @@ import Menu from "../views/Menu.vue";
 import Order from "../views/Order.vue";
 import Error_404 from "../views/Page_404.vue";
 import Test from "../views/Test.vue";
+import Login from "../views/Login.vue"
+import Register from "../views/Register.vue"
+
 
 const routes = [
   { path: "/", redirect: "/home" },
@@ -17,16 +20,16 @@ const routes = [
     name: "Menu",
     components: { default: Menu },
   },
-  // {
-  //   path: "/login",
-  //   name: "Login",
-  //   components: { default: Login },
-  // },
-  // {
-  //   path: "/register",
-  //   name: "Register",
-  //   components: { default: Register },
-  // },
+  {
+    path: "/login",
+    name: "Login",
+    components: { default: Login },
+  },
+  {
+    path: "/register",
+    name: "Register",
+    components: { default: Register },
+  },
   {
     path: "/order",
     name: "Order",

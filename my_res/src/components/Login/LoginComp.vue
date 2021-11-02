@@ -33,13 +33,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
 							<span>Ghi nhớ đăng nhập</span>
+              <span class="forgot-password"> <a href="#"> Quên mật khẩu</a></span>
 						</label>
 						<div class="clear"> </div>
 					</div>
 					<input type="submit" value="Đăng nhập">
 				</form>
-				<p class="had-account">Không có tài khoản? <a href="#"> Đăng ký ngay!</a></p>
-				<p class="forgot-password"> <a href="#"> Quên mật khẩu</a></p>
+				<p class="no-account">Không có tài khoản? <a href="/register"> Đăng ký ngay!</a></p>
+        <p class="back-to-home"> <a href="/home"> Về trang chủ</a></p>
 			</div>
 		</div>
 	</div>
@@ -50,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 export default {
-
+  name: "LoginComp"
 }
 </script>
 
@@ -161,10 +162,6 @@ span{
   margin-left: 0.5em;
 }
 
-.had-account{
-  color: #000 !important;
-}
-
 body{
   background: #A52A2A;
   background-size: cover;
@@ -187,6 +184,7 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
 .brand_logo {
   height: 150px;
   width: 150px;
@@ -283,7 +281,16 @@ input[type="submit"]:hover {
   background: #8B0000;
 }
 
-.had-account{
+.forgot-password{
+  font-size: 1em;
+  color: #000;
+  text-align: right;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-left: 8em;
+}
+
+.no-account{
   font-size: 1em;
   color: #000;
   text-align: center;
@@ -292,7 +299,7 @@ input[type="submit"]:hover {
   margin-bottom: 0.5em;
 }
 
-.forgot-password{
+.back-to-home{
   font-size: 1em;
   color: #000;
   text-align: center;
@@ -300,7 +307,7 @@ input[type="submit"]:hover {
   font-weight: 300;
 }
 
-.had-account a, .forgot-password a{
+.no-account a, .forgot-password a, .back-to-home a{
   color: #A52A2A;
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
@@ -308,7 +315,7 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
-.had-account a:hover, .forgot-password a{
+.no-account a:hover, .forgot-password a:hover, .back-to-home a:hover{
   color: #8B0000;
 }
 
