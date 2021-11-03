@@ -1,14 +1,39 @@
 <template>
   <div>
-    <button class="btn btn-success shine">
-      {{ text }}
+    <button class="btn btn-success shine" @click="addItemHandler">
+      <!-- {{ text }} -->
+      <i class="bi bi-cart-fill"> Mua</i>
     </button>
   </div>
 </template>
 
 <script>
+import { inject } from "vue";
+
 export default {
-  props: ["text"],
+  // props: ["text"],
+
+  setup() {
+    const emitter = inject("emitter");
+
+    const addItem = () => {
+      emitter.emit("add-item");
+    };
+
+    return {
+      addItem,
+    };
+  },
+
+  methods: {
+    addItemHandler() {
+      this.addItem();
+      this.$store.commit({
+        type: "insertItem",
+        test: "example",
+      });
+    },
+  },
 };
 </script>
 

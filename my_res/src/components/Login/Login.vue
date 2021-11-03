@@ -59,8 +59,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </form>
             <p class="had-account">
               Không có tài khoản? <a href="#"> Đăng ký ngay!</a>
+              <!-- <router-link to='/register'> Đăng ký ngay!</router-link> -->
             </p>
-            <p class="forgot-password"><a href="#"> Quên mật khẩu</a></p>
+            <p class="forgot-password">
+              <a href="#"> Quên mật khẩu</a>
+              <!-- <router-link to="/resetpassword"> Quên mật khẩu?</router-link> -->
+            </p>
           </div>
         </div>
       </div>

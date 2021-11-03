@@ -83,15 +83,7 @@
                   class="btn-group w-100"
                   role="group"
                   aria-label="Basic mixed styles example"
-                >
-                  <button type="button" class="btn btn-danger">
-                    Hủy đặt
-                  </button>
-
-                  <button type="button" class="btn btn-success">
-                    Tiếp tục
-                  </button>
-                </div>
+                ></div>
               </table>
             </div>
           </td>
@@ -103,7 +95,14 @@
 </template>
 
 <script>
-export default {};
+// import { inject } from "vue";
+
+export default {
+  setup() {
+    // const emitter = inject("emitter");
+  },
+  methods: {},
+};
 </script>
 
 <style scoped>
@@ -111,7 +110,7 @@ export default {};
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 1.25rem;
 }
 
 img {
@@ -341,11 +340,5 @@ a {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   font-weight: 700;
-}
-
-.btn {
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 </style>

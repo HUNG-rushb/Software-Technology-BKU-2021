@@ -15,7 +15,7 @@
         <span class="badge rounded-pill bg-success">20.000 đồng</span>
 
         <button class="btn btn-success shine" @click="addItemHandler">
-          <i class="bi bi-cart-fill"></i> Mua
+          <i class="bi bi-cart-fill"> Mua</i>
         </button>
 
         <!-- <Button /> -->
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import Button from "../shared/Button.vue";
 import { inject } from "vue";
 
 export default {
@@ -50,7 +49,7 @@ export default {
     },
   },
 
-  components: { Button },
+  components: {},
   mounted() {},
   // setup(){
   //   const emitter = inject("emitter"); // Inject `emitter`
