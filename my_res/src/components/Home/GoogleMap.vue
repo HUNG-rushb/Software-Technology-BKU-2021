@@ -15,6 +15,12 @@ export default {};
 </script>
 
 <style scoped>
+.google-map {
+  margin-top: 3rem;
+  scale: 1.2;
+  background-color: #666363;
+}
+
 #MapAPI {
   width: 100%;
   height: 100%;

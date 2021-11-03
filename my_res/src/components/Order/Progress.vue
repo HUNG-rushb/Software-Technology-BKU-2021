@@ -41,13 +41,12 @@
 
 <script>
 export default {
-  props: ["length"],
+  props: ["barWidth", "first", "second", "third"],
   data() {
     return {
-      barWidth: 33,
-      yourcart: true,
-      destinaton: false,
-      confirm: false,
+      yourcart: this.first,
+      destinaton: this.second,
+      confirm: this.third,
     };
   },
 };
