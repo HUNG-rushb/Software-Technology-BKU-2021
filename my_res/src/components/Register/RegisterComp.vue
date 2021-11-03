@@ -184,14 +184,12 @@ span{
 }
 
 body{
-  background: #A52A2A;
+  background-image: url("../../assets/background2.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center; 
   font-family: 'Roboto', sans-serif;
-}
-
-.main-w3layouts{
-  background: #A52A2A;
 }
 
 .brand_logo_container {
