@@ -121,14 +121,14 @@ export default {
 .main-header__brand {
   text-decoration: none;
   color: #494449;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   padding-right: 4rem;
   text-align: center;
 }
 
 .main-header__brand img {
-  height: 3.6rem;
+  height: 2.8rem;
   vertical-align: middle;
 }
 

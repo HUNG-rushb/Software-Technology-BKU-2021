@@ -2,25 +2,24 @@
   <div>
     <div class="container overflow-hidden">
       <div class="row gy-3">
-        <!-- <div v in class="col-6">
-          <CartCard />
-        </div> -->
-
-        <div class="col-4" data-aos="zoom-in-up">
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
           <FoodCard />
         </div>
-        <!-- <div class="col-4" data-aos="zoom-in-up">
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
           <FoodCard />
         </div>
-        <div class="col-4" data-aos="zoom-in-up">
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
           <FoodCard />
         </div>
-        <div class="col-4" data-aos="zoom-in-up">
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
           <FoodCard />
         </div>
-        <div class="col-4" data-aos="zoom-in-up">
-          <FoodCard /> -->
-        <!-- </div> -->
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
+          <FoodCard />
+        </div>
+        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
+          <FoodCard />
+        </div>
       </div>
     </div>
   </div>
