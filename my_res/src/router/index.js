@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
+import ResetAccount from "../views/ResetAccount.vue"
 import Menu from "../views/Menu.vue";
 
 import Order from "../views/Order.vue";
@@ -33,6 +34,11 @@ const routes = [
     path: "/register",
     name: "Register",
     components: { default: Register },
+  },
+  {
+    path: "/resetaccount",
+    name: "ResetAccount",
+    components: { default: ResetAccount },
   },
   {
     path: "/order",

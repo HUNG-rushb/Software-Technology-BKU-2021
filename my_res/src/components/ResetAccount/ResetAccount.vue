@@ -23,23 +23,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="brand_logo_container">
 		  <img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
 		</div>
-		<h1>Đăng nhập</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-					<input class="text username" type="text" name="username" placeholder="Tên tài khoản" required="">
-					<input class="text password" type="password" name="password" placeholder="Mật khẩu" required="">
+          <p class="instruction">Chúng tôi sẽ gửi một email xác nhận đến email bạn nhập bên dưới </p>
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>Ghi nhớ đăng nhập</span>
-              <span class="forgot-password"> <a href="/resetaccount"> Quên mật khẩu</a></span>
-						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="Đăng nhập">
+					<input type="submit" value="Xác nhận">
 				</form>
-				<p class="no-account">Không có tài khoản? <a href="/register"> Đăng ký ngay!</a></p>
         <p class="back-to-home"> <a href="/home"> Về trang chủ</a></p>
 			</div>
 		</div>
@@ -51,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 export default {
-  name: "Login"
+  name: "ResetAccount"
 }
 </script>
 
@@ -157,10 +150,6 @@ img {
 }
 
 /*-- end reset --*/
-span{
-  color: #000;
-  margin-left: 0.5em;
-}
 
 body{
   background-image: url("../../assets/background2.jpg");
@@ -190,16 +179,6 @@ body{
   border: 2px solid white;
 }
 
-h1 {
-  font-size: 3em;
-  text-align: center;
-  color: #fff;
-  font-weight: 100;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  font-family: 'Roboto', sans-serif;
-}
-
 /*-- main --*/
 .main-w3layouts {
   padding: 3em 0 1em;
@@ -216,7 +195,7 @@ h1 {
   padding: 3em;
 }
 
-input[type="text"], input[type="password"]{
+input[type="email"]{
   font-size: 0.9em;
   /* color: #fff; */
   font-weight: 100;
@@ -236,11 +215,7 @@ input[type="text"], input[type="password"]{
   font-family: 'Roboto', sans-serif;
 }
 
-input.text.username{
-  background-color: #fff;
-}
-
-input.text.password{
+input.text.email{
   margin: 2em 0;
   background-color: #fff;
 }
@@ -279,22 +254,12 @@ input[type="submit"]:hover {
   background: #8B0000;
 }
 
-.forgot-password{
-  font-size: 1em;
-  color: #000;
-  text-align: right;
-  letter-spacing: 1px;
-  font-weight: 300;
-  margin-left: 8em;
-}
-
-.no-account{
+.instruction{
   font-size: 1em;
   color: #000;
   text-align: center;
   letter-spacing: 1px;
   font-weight: 300;
-  margin-bottom: 0.5em;
 }
 
 .back-to-home{
@@ -305,7 +270,7 @@ input[type="submit"]:hover {
   font-weight: 300;
 }
 
-.no-account a, .forgot-password a, .back-to-home a{
+.back-to-home a{
   color: #A52A2A;
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
@@ -313,91 +278,14 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
-.no-account a:hover, .forgot-password a:hover, .back-to-home a:hover{
+.back-to-home a:hover{
   color: #8B0000;
 }
 
 /*-- //main --*/
-/*-- checkbox --*/
-.wthree-text label {
-  font-size: 0.9em;
-  color: #fff;
-  font-weight: 200;
-  cursor: pointer;
-  position: relative;
-}
-
-input.checkbox {
-  background: #fff;
-  cursor: pointer;
-  width: 1.2em;
-  height: 1.2em;
-}
-
-input.checkbox:before {
-  content: "";
-  position: absolute;
-  width: 1.2em;
-  height: 1.2em;
-  background: inherit;
-  cursor: pointer;
-}
-
-input.checkbox:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  z-index: 1;
-  width: 1.2em;
-  height: 1.2em;
-  border: 1px solid #000;
-  -webkit-transition: .4s ease-in-out;
-  -moz-transition: .4s ease-in-out;
-  -o-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
-}
-
-input.checkbox:checked:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  height: .5rem;
-  border-color: #000;
-  border-top-color: transparent;
-  border-right-color: transparent;
-}
-
-.anim input.checkbox:checked:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  height: .5rem;
-  border-color: transparent;
-  border-right-color: transparent;
-  animation: .4s rippling .4s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes rippling {
-  50% {
-    border-left-color: #000;
-  }
-
-  100% {
-    border-bottom-color: #000;
-    border-left-color: #000;
-  }
-}
-/*-- //checkbox --*/
-
 /*-- responsive-design --*/
 @media(max-width:1440px) {
-  input[type="text"], input[type="password"] {
+  input[type="email"]{
     width: 94%;
   }
 }
@@ -453,7 +341,7 @@ input.checkbox:checked:after {
     width: 58%;
   }
 
-  input[type="text"], input[type="password"] {
+  input[type="email"]{
     width: 93%;
   }
 }
@@ -515,7 +403,7 @@ input.checkbox:checked:after {
     padding: 1.8em;
   }
 
-  input[type="text"], input[type="password"] {
+  input[type="email"]{
     width: 91%;
   }
 
@@ -591,7 +479,7 @@ input.checkbox:checked:after {
     margin: 0 0 1em;
   }
 
-  input[type="text"], input[type="password"] {
+  input[type="email"]{
     width: 89.5%;
     font-size: 0.85em;
   }

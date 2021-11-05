@@ -72,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 export default {
-  name: "RegisterComp"
+  name: "Register"
 }
 </script>
 
