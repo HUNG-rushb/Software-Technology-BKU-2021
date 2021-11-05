@@ -10,6 +10,7 @@
       >
         <div class="d-flex">
           <div class="toast-body">
+            <i class="bi bi-check-circle-fill"></i>
             <b>Thêm vào giỏ hàng thành công!</b>
           </div>
 
