@@ -39,13 +39,18 @@
               <router-link class="nav-link" to="/menu">Menu</router-link>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#order">Đặt món</a>
-              <!-- <router-link class="nav-link" to="/order">Đặt món</router-link> -->
-            </li>
+              <router-link class="nav-link" to="/order">Đặt món</router-link>
+            </li> -->
 
             <li class="nav-item">
               <a class="nav-link" href="#contact">Liên hệ</a>
+              <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
+            </li>
+
+            <li class="nav-item">
+              <router-link class="nav-link" to="/feedback">Góp ý</router-link>
               <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
             </li>
           </ul>
@@ -105,11 +110,6 @@ export default {
   border: 1px solid #a4dd8e;
 }
 
-/* #space {
-  padding: 0 3rem 0 3rem;
-} */
-/* ------------------------------------- */
-/* ------------------------------------- */
 /* ------------------------------------- */
 /* ------------------------------------- */
 .main-header {
