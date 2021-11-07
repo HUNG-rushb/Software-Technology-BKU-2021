@@ -1,4 +1,5 @@
 <template>
+
     <div>
         <Register />
     </div>
@@ -15,3 +16,4 @@ export default {
 <style>
 
 </style>
+

@@ -39,13 +39,18 @@
               <router-link class="nav-link" to="/menu">Menu</router-link>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#order">Đặt món</a>
-              <!-- <router-link class="nav-link" to="/order">Đặt món</router-link> -->
-            </li>
+              <router-link class="nav-link" to="/order">Đặt món</router-link>
+            </li> -->
 
             <li class="nav-item">
               <a class="nav-link" href="#contact">Liên hệ</a>
+              <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
+            </li>
+
+            <li class="nav-item">
+              <router-link class="nav-link" to="/feedback">Góp ý</router-link>
               <!-- <router-link class="nav-link" to="/contact">Liên hệ</router-link> -->
             </li>
           </ul>
@@ -105,11 +110,6 @@ export default {
   border: 1px solid #a4dd8e;
 }
 
-/* #space {
-  padding: 0 3rem 0 3rem;
-} */
-/* ------------------------------------- */
-/* ------------------------------------- */
 /* ------------------------------------- */
 /* ------------------------------------- */
 .main-header {
@@ -121,14 +121,14 @@ export default {
 .main-header__brand {
   text-decoration: none;
   color: #494449;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   padding-right: 4rem;
   text-align: center;
 }
 
 .main-header__brand img {
-  height: 3.6rem;
+  height: 2.8rem;
   vertical-align: middle;
 }
 

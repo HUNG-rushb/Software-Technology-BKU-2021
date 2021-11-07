@@ -4,6 +4,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import ResetAccount from "../views/ResetAccount.vue"
 import Menu from "../views/Menu.vue";
+import Feedback from "../views/Feedback.vue";
 
 import Order from "../views/Order.vue";
 import YourCart from "../components/Order/YourCart.vue";
@@ -36,9 +37,16 @@ const routes = [
     components: { default: Register },
   },
   {
+
     path: "/resetaccount",
     name: "ResetAccount",
     components: { default: ResetAccount },
+  },
+  {
+    path: "/feedback",
+    name: "Feedback",
+    components: { default: Feedback },
+
   },
   {
     path: "/order",

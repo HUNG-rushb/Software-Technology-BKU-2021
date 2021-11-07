@@ -1,5 +1,5 @@
 <template>
-  <section class="google-map" data-aos="zoom-in-up">
+  <section class="google-map" data-aos="zoom-in-up" data-aos-once="true">
     <!-- https://developers.google.com/maps/documentation/embed/map-generator -->
     <iframe
       id="MapAPI"
