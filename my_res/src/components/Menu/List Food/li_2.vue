@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <!-- <img src="../../../assets/images/Food images/bun_bo_hue.jpg" /> -->
+        <img src="../../../assets/images/FoodImages/bun_bo_hue.jpg" />
         <h3>Combo cặp đôi</h3>
         <h3>120.000 đ</h3>
         <h5>2 Bún bò <br />+2 Sữa Tươi</h5>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-sm-4">
-        <!-- <img src="../../../assets/images/Food images/bun_cha_hn.jpg" /> -->
+        <img src="../../../assets/images/FoodImages/bun_cha_hn.jpg" />
         <h3>Combo bộ ba</h3>
         <h3>180.000 đ</h3>
         <h5>3 Bún Chả Hà Nội <br />+3 Trà Đào</h5>

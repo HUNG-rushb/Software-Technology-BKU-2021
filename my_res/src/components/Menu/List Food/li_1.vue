@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <!-- <img src="../../../assets/images/Food images/banh_canh.jpg" /> -->
+        <img src="../../../assets/images/FoodImages/banh_canh.jpg" />
         <h3>Combo A</h3>
         <h3>55.000 đ</h3>
         <h5>Bánh Canh <br />+ 1 Nước Cam Vắt</h5>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-sm-4">
-        <!-- <img src="../../../assets/images/Food images/banh_da_cua.jpg" /> -->
+        <img src="../../../assets/images/FoodImages/banh_da_cua.jpg" />
         <h3>Combo B</h3>
         <h3>45.000 đ</h3>
         <h5>Bánh Đa Cua <br />+1 Chanh Dây</h5>
