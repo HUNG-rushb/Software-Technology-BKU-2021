@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Menu from "../views/Menu.vue";
+import Feedback from "../views/Feedback.vue";
 
 import Order from "../views/Order.vue";
 import YourCart from "../components/Order/YourCart.vue";
@@ -33,6 +34,11 @@ const routes = [
     path: "/register",
     name: "Register",
     components: { default: Register },
+  },
+  {
+    path: "/feedback",
+    name: "Feedback",
+    components: { default: Feedback },
   },
   {
     path: "/order",

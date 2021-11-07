@@ -50,19 +50,19 @@ export default {
     clicking2() {
       this.title = this.li_2;
     },
-    clicking3() {
-      this.title = this.li_3;
-    },
-    clicking4() {
-      this.title = this.li_4;
-    },
+    // clicking3() {
+    //   this.title = this.li_3;
+    // },
+    // clicking4() {
+    //   this.title = this.li_4;
+    // },
   },
 };
 </script>
 
 <style scoped>
 .menu1 {
-  /* background-image: url("../../assets/bg_menu.jpg"); */
+  background-image: url("../../assets/background2.jpg");
   background-repeat: no-repeat;
   margin: 0;
   height: 1200px;
