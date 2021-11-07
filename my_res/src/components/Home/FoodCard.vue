@@ -1,10 +1,13 @@
 <template>
   <div>
-    <div class="card">
+    <div class="card shadow-lg">
       <img src="../../assets/logo.jpg" class="card-img-top" alt="..." />
 
       <div class="card-body">
-        <h5 class="card-title">Bún bò Huế</h5>
+        <h5 class="card-title">
+          Bún bò Huế
+          <i class="bi bi-info-circle-fill" @click="foodDetailsHandler" />
+        </h5>
         <!-- <h5 class="card-title">{{ name }}</h5> -->
 
         <p class="card-text">
@@ -15,10 +18,8 @@
         <span class="badge rounded-pill bg-success">20.000 đồng</span>
 
         <button class="btn btn-success shine" @click="addItemHandler">
-          <i class="bi bi-cart-fill"> Mua</i>
+          <i class="bi bi-cart-fill"></i> Mua
         </button>
-
-        <!-- <Button /> -->
       </div>
     </div>
   </div>
@@ -35,8 +36,13 @@ export default {
       emitter.emit("add-item");
     };
 
+    const showFoodDetails = () => {
+      emitter.emit("show-food-details");
+    };
+
     return {
       addItem,
+      showFoodDetails,
     };
   },
   methods: {
@@ -44,23 +50,27 @@ export default {
       this.addItem();
       this.$store.commit({
         type: "insertItem",
-        test: "example",
       });
+    },
+
+    foodDetailsHandler() {
+      this.showFoodDetails();
     },
   },
 
-  components: {},
   mounted() {},
-  // setup(){
-  //   const emitter = inject("emitter"); // Inject `emitter`
-  // }
 };
 </script>
 
 <style scoped>
+.card-img-top {
+  max-height: 15rem;
+}
+
 .card {
-  /* width: 18rem; */
   display: block;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 button {
@@ -86,7 +96,6 @@ button {
   position: relative;
   overflow: hidden;
   transition: all 100ms linear;
-
   right: 0;
 }
 
@@ -126,5 +135,9 @@ button {
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bi-info-circle-fill {
+  cursor: pointer;
 }
 </style>

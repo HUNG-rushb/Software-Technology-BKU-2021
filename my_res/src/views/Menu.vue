@@ -1,12 +1,20 @@
 <template>
-  <div></div>
+  <div>
+    <Header />
+    <CheckCart />
+    <MenuGrid />
+    <Footer />
+  </div>
 </template>
 
 <script>
-// import GridMenu from "../components/Menu/GridMenu.vue";
+import Header from "../components/Layout/Header.vue";
+import Footer from "../components/Layout/Footer.vue";
+import CheckCart from "../components/Layout/CheckCart.vue";
+import MenuGrid from "../components/Menu/MenuGrid.vue";
 
 export default {
-  // components: { GridMenu },
+  components: { MenuGrid, Header, Footer, CheckCart },
 };
 </script>
 

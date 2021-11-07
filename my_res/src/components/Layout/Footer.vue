@@ -2,7 +2,11 @@
   <div loading="lazy">
     <BackToTop />
 
-    <footer class="footer-distributed" data-aos="zoom-in-up">
+    <footer
+      class="footer-distributed"
+      data-aos="zoom-in-up"
+      data-aos-once="true"
+    >
       <div class="footer-left">
         <h3>Món Việt</h3>
         <br />
