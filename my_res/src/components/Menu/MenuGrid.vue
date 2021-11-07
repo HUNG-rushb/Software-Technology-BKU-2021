@@ -62,9 +62,9 @@ export default {
 
 <style scoped>
 .menu1 {
-  background-image: url("../../assets/background2.jpg");
+  /* background-image: url("../../assets/background2.jpg"); */
   background-repeat: no-repeat;
-  margin: 0;
+  margin-top: 10rem;
   height: 1200px;
 }
 hr {
@@ -72,9 +72,9 @@ hr {
   border-top: 0;
 }
 h1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
+  font-weight: bold; */
   font-size: 48px;
   text-align: center;
   font-style: italic;

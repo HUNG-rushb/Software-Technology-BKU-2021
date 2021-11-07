@@ -68,8 +68,9 @@ export default {
 }
 
 .card {
-  width: 15rem;
   display: block;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 button {

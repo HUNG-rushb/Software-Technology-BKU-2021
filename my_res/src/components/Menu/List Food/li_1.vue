@@ -24,8 +24,8 @@
           <button class="buy">Mua ngay</button>
         </div>
       </div>
-      <!-- <div class="col-sm-4">
-        <img src="../../../assets/bun_bo_hue.jpg" />
+      <div class="col-sm-4">
+        <img src="../../../assets/images/FoodImages/bun_bo_hue.jpg" />
         <h3>Combo C</h3>
         <h3>65.000 đ</h3>
         <h5>Bún bò Huế<br />+1 Sữa Tươi</h5>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <img src="../../../assets/bun_ca_hn.jpg" />
+        <img src="../../../assets/images/FoodImages/bun_ca_hn.jpg" />
         <h3>Combo D</h3>
         <h3>40.000 đ</h3>
         <h5>Bún Cá Hà Nội<br />+1 Mước Sâm</h5>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <img src="../../../assets/bun_cha_hn.jpg" />
+        <img src="../../../assets/images/FoodImages/bun_cha_hn.jpg" />
         <h3>Combo E</h3>
         <h3>65.000 đ</h3>
         <h5>Bún Chả Hà Nội<br />+1 Trà Đào</h5>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <img src="../../../assets/com_tam.jpg" />
+        <img src="../../../assets/images/FoodImages/com_tam.jpg" />
         <h3>Combo Super</h3>
         <h3>80.000 đ</h3>
         <h5>Cơm Tấm (Sườn,Bì,Chả)<br />+1 Pepsi</h5>
@@ -63,7 +63,7 @@
           <button class="custom">Tùy Chỉnh</button>
           <button class="buy">Mua ngay</button>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>

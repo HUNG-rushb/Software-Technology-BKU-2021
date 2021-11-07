@@ -6,57 +6,82 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<!-- //web font -->
-</head>
-<body>
-	<!-- main -->
-	<div class="main-w3layouts wrapper">
-    <div class="brand_logo_container">
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <!-- Custom Theme files -->
+      <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+      <!-- //Custom Theme files -->
+      <!-- web font -->
+      <link
+        href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i"
+        rel="stylesheet"
+      />
+      <!-- //web font -->
+    </head>
+    <body>
+      <!-- main -->
+      <div class="main-w3layouts wrapper">
+        <router-link to="/home">
+          <div class="brand_logo_container">
+            <img
+              src="../../assets/logo_final.png"
+              class="brand_logo"
+              alt="Logo"
+            />
+          </div>
+        </router-link>
+        <!-- <div class="brand_logo_container">
 		  <img src="../../assets/logo_final.png" class="brand_logo" alt="Logo">
-		</div>
-		<h1>Đăng nhập</h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
-				<form action="#" method="post">
-					<input class="text username" type="text" name="username" placeholder="Tên tài khoản" required="">
-					<input class="text password" type="password" name="password" placeholder="Mật khẩu" required="">
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>Ghi nhớ đăng nhập</span>
-              <span class="forgot-password"> <a href="/resetaccount"> Quên mật khẩu</a></span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-					<input type="submit" value="Đăng nhập">
-				</form>
-				<p class="no-account">Không có tài khoản? <a href="/register"> Đăng ký ngay!</a></p>
-        <p class="back-to-home"> <a href="/home"> Về trang chủ</a></p>
-			</div>
-		</div>
-	</div>
-	<!-- //main -->
-</body>
-</html>
-
+		</div> -->
+        <h1>Đăng nhập</h1>
+        <div class="main-agileinfo">
+          <div class="agileits-top">
+            <form action="#" method="post">
+              <input
+                class="text username"
+                type="text"
+                name="username"
+                placeholder="Tên tài khoản"
+                required=""
+              />
+              <input
+                class="text password"
+                type="password"
+                name="password"
+                placeholder="Mật khẩu"
+                required=""
+              />
+              <div class="wthree-text">
+                <label class="anim">
+                  <input type="checkbox" class="checkbox" required="" />
+                  <span>Ghi nhớ đăng nhập</span>
+                  <span class="forgot-password">
+                    <a href="/resetaccount"> Quên mật khẩu</a></span
+                  >
+                </label>
+                <div class="clear"></div>
+              </div>
+              <input type="submit" value="Đăng nhập" />
+            </form>
+            <p class="no-account">
+              Không có tài khoản? <a href="/register"> Đăng ký ngay!</a>
+            </p>
+            <p class="back-to-home"><a href="/home"> Về trang chủ</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </body>
+  </html>
 </template>
 
 <script>
 export default {
-
-  name: "Login"
-}
-
+  name: "Login",
+};
 </script>
 
 <style scoped>

@@ -23,13 +23,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <body>
       <!-- main -->
       <div class="main-w3layouts wrapper">
-        <div class="brand_logo_container">
-          <img
-            src="../../assets/logo_final.png"
-            class="brand_logo"
-            alt="Logo"
-          />
-        </div>
+        <router-link to="/home">
+          <div class="brand_logo_container">
+            <img
+              src="../../assets/logo_final.png"
+              class="brand_logo"
+              alt="Logo"
+            />
+          </div>
+        </router-link>
+
         <h1>Đăng ký</h1>
         <div class="main-agileinfo">
           <div class="agileits-top">
@@ -138,10 +141,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script>
 export default {
-
-  name: "Register"
-}
-
+  name: "Register",
+};
 </script>
 
 <style scoped>
