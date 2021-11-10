@@ -15,6 +15,8 @@
     <GoogleMap />
 
     <Footer />
+
+    <!-- <UpdateDataFirebase /> -->
   </div>
 </template>
 
@@ -28,6 +30,10 @@ import GoogleMap from "../components/Home/GoogleMap.vue";
 import Footer from "../components/Layout/Footer.vue";
 import ReviewFood from "../components/Layout/ReviewFood.vue";
 
+// import UpdateDataFirebase from "../components/shared/UpdateFirebaseData.vue";
+
+import getMenu from "../firebase/getMenu";
+
 export default {
   components: {
     HeaderVideo,
@@ -38,6 +44,14 @@ export default {
     AddToast,
     GoogleMap,
     ReviewFood,
+    // UpdateDataFirebase,
+  },
+  setup() {
+    const { menu, error, load } = getMenu();
+
+    load();
+
+    return { menu, error };
   },
 };
 </script>
