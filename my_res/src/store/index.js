@@ -72,7 +72,7 @@ const store = createStore({
     quantity(state) {
       return state.qty;
     },
-    isLogIn(state) {
+    isLoggedIn(state) {
       return state.isLoggedIn;
     },
     username(state) {

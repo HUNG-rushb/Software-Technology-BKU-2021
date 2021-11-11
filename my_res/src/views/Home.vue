@@ -1,20 +1,20 @@
 <template>
   <div>
-    <!-- <Header /> -->
+    <Header />
 
-    <!-- <HeaderVideo /> -->
+    <HeaderVideo />
 
     <CheckCart />
 
-    <!-- <ReviewFood /> -->
+    <ReviewFood />
 
-    <!-- <AddToast /> -->
+    <AddToast />
 
     <HomeMenu />
 
-    <!-- <GoogleMap />
+    <GoogleMap />
 
-    <Footer /> -->
+    <Footer />
 
     <!-- <UpdateDataFirebase /> -->
   </div>

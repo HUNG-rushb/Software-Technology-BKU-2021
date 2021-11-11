@@ -84,7 +84,7 @@ export default {
   methods: {},
   computed: {
     isLogIn() {
-      return this.$store.state.getters.isLogIn;
+      return this.$store.getters.isLoggedIn;
     },
   },
 };
