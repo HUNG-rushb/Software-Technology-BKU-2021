@@ -1,24 +1,85 @@
 import { createStore } from "vuex";
+import menu from "../firebase/getMenu";
 
-export default createStore({
+const store = createStore({
   state: {
-    counter: 0,
-    // $store.state.counter
-    itemCount: 0,
+    username: "",
+    isLoggedIn: false,
+    items: [],
+    total: 0,
+    qty: 0,
   },
   mutations: {
-    insertItem(state) {
-      state.itemCount++;
+    addProductToCart(state, payload) {
+      const productData = payload;
+
+      const productInCartIndex = state.items.findIndex(
+        (ci) => ci.productId === productData.id
+      );
+
+      if (productInCartIndex >= 0) {
+        state.items[productInCartIndex].qty++;
+      } else {
+        const newItem = {
+          name: productData.name,
+          productId: productData.id,
+          title: productData.title,
+          image: productData.image,
+          price: productData.price,
+          qty: 1,
+        };
+        state.items.push(newItem);
+      }
+
+      state.qty++;
+      state.total += productData.price;
+
+      console.log(state.items);
     },
-    deleteItem(state) {
-      state.itemCount--;
+
+    // removeProductFromCart(state, payload) {
+    //   const prodId = payload.productId;
+    //   const productInCartIndex = state.items.findIndex(
+    //     (cartItem) => cartItem.productId === prodId
+    //   );
+    //   const prodData = state.items[productInCartIndex];
+    //   state.items.splice(productInCartIndex, 1);
+    //   state.qty -= prodData.qty;
+    //   state.total -= prodData.price * prodData.qty;
+    // },
+  },
+
+  actions: {
+    addToCart(context, payload) {
+      const prodId = payload.id;
+
+      const product = menu.value.find((prod) => prod.id === prodId);
+
+      context.commit("addProductToCart", product);
     },
+
+    // removeFromCart(context, payload) {
+    //   context.commit("removeProductFromCart", payload);
+    // },
   },
   getters: {
-    finalItemCount(state) {
-      return state.itemCount;
+    products(state) {
+      return state.items;
+    },
+    totalSum(state) {
+      return state.total;
+    },
+    quantity(state) {
+      return state.qty;
+    },
+    isLogIn(state) {
+      return state.isLoggedIn;
+    },
+    username(state) {
+      return state.username;
     },
   },
-  actions: {},
   modules: {},
 });
+
+export default store;

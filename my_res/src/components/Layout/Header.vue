@@ -56,18 +56,22 @@
           </ul>
 
           <form>
-            <router-link class="btn" to="/login" id="login">
-              <i class="bi bi-person-fill"></i> Đăng nhập
-            </router-link>
+            <div v-if="isLogIn === false">
+              <router-link class="btn" to="/login" id="login">
+                <i class="bi bi-person-fill"></i> Đăng nhập
+              </router-link>
 
-            <router-link class="btn" to="/register" id="register">
-              <i class="bi bi-person-plus-fill"></i> Đăng kí
-            </router-link>
+              <router-link class="btn" to="/register" id="register">
+                <i class="bi bi-person-plus-fill"></i> Đăng kí
+              </router-link>
+            </div>
 
-            <button class="btn btn-danger">
-              <!-- <i class="bi bi-person-plus-fill" v-if ></i> Đăng xuất -->
-              <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
-            </button>
+            <div v-if="isLogIn === true">
+              <!-- <span></span> -->
+              <button class="btn btn-danger">
+                <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -78,6 +82,11 @@
 <script>
 export default {
   methods: {},
+  computed: {
+    isLogIn() {
+      return this.$store.state.getters.isLogIn;
+    },
+  },
 };
 </script>
 

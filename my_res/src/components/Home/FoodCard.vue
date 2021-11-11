@@ -5,17 +5,20 @@
 
       <div class="card-body">
         <h5 class="card-title">
-          Bún bò Huế
+          {{ food.name }}
           <i class="bi bi-info-circle-fill" @click="foodDetailsHandler" />
         </h5>
-        <!-- <h5 class="card-title">{{ name }}</h5> -->
 
-        <p class="card-text">
-          <!-- {{ description }} -->
-          Bún bò Huế
-        </p>
+        <!-- <p class="card-text">
+          {{ food.description }}
+        </p> -->
+        <hr />
 
-        <span class="badge rounded-pill bg-success">20.000 đồng</span>
+        <div class="food-card_price">
+          <span>
+            {{ displayPrice }}
+          </span>
+        </div>
 
         <button class="btn btn-success shine" @click="addItemHandler">
           <i class="bi bi-cart-fill"></i> Mua
@@ -29,6 +32,7 @@
 import { inject } from "vue";
 
 export default {
+  props: ["food", "id"],
   setup() {
     const emitter = inject("emitter");
 
@@ -48,8 +52,12 @@ export default {
   methods: {
     addItemHandler() {
       this.addItem();
-      this.$store.commit({
-        type: "insertItem",
+
+      // this.$store.dispatch("cart/addToCart", {
+      //   id: this.id,
+      // });
+      this.$store.dispatch("addToCart", {
+        id: this.id,
       });
     },
 
@@ -57,20 +65,40 @@ export default {
       this.showFoodDetails();
     },
   },
-
-  mounted() {},
+  computed: {
+    displayPrice() {
+      return parseInt(this.food.price).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
+  },
 };
 </script>
 
 <style scoped>
+.card-title {
+  font-size: 1rem;
+}
+
 .card-img-top {
   max-height: 15rem;
 }
 
 .card {
   display: block;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+}
+
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.food-card_price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f47a00;
 }
 
 button {

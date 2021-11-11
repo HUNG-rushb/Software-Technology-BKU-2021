@@ -1,20 +1,20 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header /> -->
 
-    <HeaderVideo />
+    <!-- <HeaderVideo /> -->
 
     <CheckCart />
 
-    <ReviewFood />
+    <!-- <ReviewFood /> -->
 
-    <AddToast />
+    <!-- <AddToast /> -->
 
     <HomeMenu />
 
-    <GoogleMap />
+    <!-- <GoogleMap />
 
-    <Footer />
+    <Footer /> -->
 
     <!-- <UpdateDataFirebase /> -->
   </div>
@@ -30,9 +30,7 @@ import GoogleMap from "../components/Home/GoogleMap.vue";
 import Footer from "../components/Layout/Footer.vue";
 import ReviewFood from "../components/Layout/ReviewFood.vue";
 
-// import UpdateDataFirebase from "../components/shared/UpdateFirebaseData.vue";
-
-import getMenu from "../firebase/getMenu";
+import UpdateDataFirebase from "../components/shared/UpdateFirebaseData.vue";
 
 export default {
   components: {
@@ -44,14 +42,7 @@ export default {
     AddToast,
     GoogleMap,
     ReviewFood,
-    // UpdateDataFirebase,
-  },
-  setup() {
-    const { menu, error, load } = getMenu();
-
-    load();
-
-    return { menu, error };
+    UpdateDataFirebase,
   },
 };
 </script>
