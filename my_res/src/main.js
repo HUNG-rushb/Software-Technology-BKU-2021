@@ -14,9 +14,6 @@ import "bootstrap";
 // miit plug in
 import mitt from "mitt";
 
-// number input plug-in
-import VueNumericInput from "vue-numeric-input/src/vue-numeric-input.vue";
-
 const app = createApp(App);
 
 const emitter = mitt();
@@ -24,8 +21,6 @@ app.provide("emitter", emitter);
 
 // https://ahnaineabd.medium.com/how-to-use-aos-in-a-vue-project-6fdf4cb9f9fc
 app.AOS = new AOS.init();
-
-app.component("vue-numeric-input", VueNumericInput);
 
 app.use(store).use(router);
 

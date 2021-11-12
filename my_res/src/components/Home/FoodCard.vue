@@ -9,9 +9,6 @@
           <i class="bi bi-info-circle-fill" @click="foodDetailsHandler" />
         </h5>
 
-        <!-- <p class="card-text">
-          {{ food.description }}
-        </p> -->
         <hr />
 
         <div class="food-card_price">

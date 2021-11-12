@@ -14,16 +14,6 @@
           <div class="card-body">
             <h4 class="card-title">{{ food.name }}</h4>
 
-            <!-- :mousewheel="true" -->
-            <!-- v-model="quantity" -->
-            <!-- <vue-numeric-input
-              v-model="qty"
-              :min="1"
-              :max="20"
-              :step="1"
-              align="center"
-              width="7rem"
-            /> -->
             <div class="quantity">
               <i class="bi bi-dash-circle-fill" @click="decraseItemHandler" />
 
