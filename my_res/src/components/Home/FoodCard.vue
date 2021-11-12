@@ -53,9 +53,6 @@ export default {
     addItemHandler() {
       this.addItem();
 
-      // this.$store.dispatch("cart/addToCart", {
-      //   id: this.id,
-      // });
       this.$store.dispatch("addToCart", {
         id: this.id,
       });

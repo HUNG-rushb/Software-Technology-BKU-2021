@@ -1,20 +1,22 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header /> -->
 
-    <HeaderVideo />
+    <!-- <HeaderVideo /> -->
 
     <CheckCart />
 
-    <ReviewFood />
+    <OrderButton />
 
-    <AddToast />
+    <!-- <ReviewFood /> -->
+
+    <!-- <AddToast /> -->
 
     <HomeMenu />
 
-    <GoogleMap />
+    <!-- <GoogleMap />
 
-    <Footer />
+    <Footer /> -->
 
     <!-- <UpdateDataFirebase /> -->
   </div>
@@ -24,6 +26,7 @@
 import Header from "../components/Layout/Header.vue";
 import HeaderVideo from "../components/Home/HeaderVideo.vue";
 import CheckCart from "../components/Layout/CheckCart.vue";
+import OrderButton from "../components/Layout/OrderButton.vue";
 import AddToast from "../components/Layout/AddToast.vue";
 import HomeMenu from "../components/Home/HomeMenu.vue";
 import GoogleMap from "../components/Home/GoogleMap.vue";
@@ -39,6 +42,7 @@ export default {
     HomeMenu,
     Footer,
     CheckCart,
+    OrderButton,
     AddToast,
     GoogleMap,
     ReviewFood,

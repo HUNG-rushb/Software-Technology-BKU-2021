@@ -14,23 +14,27 @@
           <div class="card-body">
             <h4 class="card-title">{{ food.name }}</h4>
 
-            <div class="food-card_order-count">
-              <div class="input-group mb-3">
-                <input
-                  type="number"
-                  min="1"
-                  max="100"
-                  step="1"
-                  value="1"
-                  id="numberinput"
-                  class="form-control input-manulator"
-                />
-                <!-- v-model="quantity" -->
-              </div>
+            <!-- :mousewheel="true" -->
+            <!-- v-model="quantity" -->
+            <!-- <vue-numeric-input
+              v-model="qty"
+              :min="1"
+              :max="20"
+              :step="1"
+              align="center"
+              width="7rem"
+            /> -->
+            <div class="quantity">
+              <i class="bi bi-dash-circle-fill" @click="decraseItemHandler" />
+
+              <p>{{ quantity }}</p>
+
+              <i class="bi bi-plus-circle-fill" @click="addItemHandler" />
             </div>
 
-            <!-- Delete Button  -->
-            <button type="button" class="btn btn-danger">
+            <p>{{ total }}</p>
+
+            <button type="button" class="btn btn-danger" @click="deleteHandler">
               <i class="bi bi-trash-fill"></i>
             </button>
           </div>
@@ -41,20 +45,62 @@
 </template>
 
 <script>
-// $("input[type='number']").inputSpinner();
-
 export default {
   props: ["food", "id"],
   data() {
-    console.log(this.food);
     return {
-      quantity: null,
+      // qty: this.food.qty,
     };
+  },
+  computed: {
+    quantity() {
+      return this.food.qty;
+    },
+    total() {
+      return parseInt(this.food.price * this.food.qty).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
+  },
+  methods: {
+    deleteHandler() {
+      this.$store.dispatch("removeFromCart", {
+        id: this.id,
+        price: this.food.price,
+        qty: this.food.qty,
+      });
+    },
+    addItemHandler() {
+      this.$store.dispatch("addToCart", {
+        id: this.id,
+      });
+    },
+    decraseItemHandler() {
+      this.$store.dispatch("minusOneItem", {
+        id: this.id,
+      });
+    },
+  },
+  watcher: {
+    quantity() {
+      console.log(quantity);
+    },
   },
 };
 </script>
 
 <style scoped>
+.quantity i,
+.quantity p {
+  display: inline-block;
+}
+
+.quantity p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .card {
   /* border: 2px solid #494449; */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);

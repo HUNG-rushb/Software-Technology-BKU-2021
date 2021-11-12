@@ -165,7 +165,7 @@
 import Header from "../Layout/Header.vue";
 import Footer from "../Layout/Footer.vue";
 import Progress from "./Progress.vue";
-import tphcm from "./tphcm";
+import tphcm from "../../data/tphcm";
 
 export default {
   components: { Progress, Header, Footer },
