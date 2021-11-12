@@ -5,6 +5,7 @@ export default createStore({
     counter: 0,
     // $store.state.counter
     itemCount: 0,
+    username: "",
   },
   mutations: {
     insertItem(state) {
@@ -13,11 +14,17 @@ export default createStore({
     deleteItem(state) {
       state.itemCount--;
     },
+    deleteUsername(state){
+      state.username = "";
+    }
   },
   getters: {
     finalItemCount(state) {
       return state.itemCount;
     },
+    getUsername(state){
+      return state.username;
+    }
   },
   actions: {},
   modules: {},
