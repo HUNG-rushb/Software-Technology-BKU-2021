@@ -56,6 +56,8 @@
           </ul>
 
           <form>
+            <span v-if="isLoggedIn">{{ username() }}</span>
+
             <router-link v-if="!isLoggedIn" class="btn" to="/login" id="login">
               <i class="bi bi-person-fill"></i> Đăng nhập
             </router-link>
@@ -85,7 +87,12 @@ export default {
 
   methods: {
     logout(){
-      return this.$store.commit("logOut");
+      this.$store.dispatch("logOut");
+      return;
+    },
+
+    username(){
+      return this.$store.getters.getUsername;
     }
   },
 };
@@ -120,6 +127,12 @@ export default {
   border: 1px solid #a4dd8e;
 }
 
+span{
+  color: #ffffff;
+  font-size: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 /* ------------------------------------- */
 /* ------------------------------------- */
 .main-header {

@@ -21,6 +21,9 @@ export default createStore({
     logOut(state){
       state.isLoggedIn = false;
     },
+    updateUsername(state, payload){
+      state.username = payload;
+    },
     deleteUsername(state){
       state.username = "";
     }
@@ -36,6 +39,16 @@ export default createStore({
       return state.username;
     }
   },
-  actions: {},
+  actions: {
+    logIn(context, payload){
+      context.commit("logIn");
+      context.commit("updateUsername", payload);
+    },
+
+    logOut(context){
+      context.commit("logOut");
+      context.commit("deleteUsername");
+    }
+  },
   modules: {},
 });

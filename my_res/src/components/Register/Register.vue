@@ -1,10 +1,4 @@
 <template>
-  <!--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
   <!DOCTYPE html>
   <html>
     <head>
@@ -447,13 +441,15 @@ input[type="tel"] {
   border-radius: 50%;
 }
 
+.form-check-input:checked {
+  color: #fff;
+  border-color: #a52a2a;
+  background-color: #a52a2a;
+}
+
 .form-check .form-check-input {
   float: left;
   margin-left: -1.5em;
-}
-
-.form-check-input[type="radio"] {
-  border-radius: 50%;
 }
 
 input.text.firstname,

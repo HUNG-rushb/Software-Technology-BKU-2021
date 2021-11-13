@@ -86,8 +86,9 @@ export default {
 
   methods: {
     login(){
-      return this.$store.commit("logIn");
-    }
+      this.$store.dispatch("logIn", document.getElementsByName("username")[0].value);
+      return;
+    },
   },
 };
 </script>
