@@ -5,6 +5,7 @@ export default createStore({
     counter: 0,
     // $store.state.counter
     itemCount: 0,
+    isLoggedIn: false,
     username: "",
   },
   mutations: {
@@ -14,6 +15,12 @@ export default createStore({
     deleteItem(state) {
       state.itemCount--;
     },
+    logIn(state){
+      state.isLoggedIn = true;
+    },
+    logOut(state){
+      state.isLoggedIn = false;
+    },
     deleteUsername(state){
       state.username = "";
     }
@@ -21,6 +28,9 @@ export default createStore({
   getters: {
     finalItemCount(state) {
       return state.itemCount;
+    },
+    isAuthenticated(state){
+      return state.isLoggedIn;
     },
     getUsername(state){
       return state.username;

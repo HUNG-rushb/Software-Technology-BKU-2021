@@ -56,15 +56,15 @@
           </ul>
 
           <form>
-            <router-link class="btn" to="/login" id="login">
+            <router-link v-if="!isLoggedIn" class="btn" to="/login" id="login">
               <i class="bi bi-person-fill"></i> Đăng nhập
             </router-link>
 
-            <router-link class="btn" to="/register" id="register">
+            <router-link v-if="!isLoggedIn" class="btn" to="/register" id="register">
               <i class="bi bi-person-plus-fill"></i> Đăng kí
             </router-link>
 
-            <button class="btn btn-danger">
+            <button v-if="isLoggedIn" @click="logout" class="btn btn-danger">
               <!-- <i class="bi bi-person-plus-fill" v-if ></i> Đăng xuất -->
               <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
             </button>
@@ -77,7 +77,17 @@
 
 <script>
 export default {
-  methods: {},
+  computed: {
+    isLoggedIn(){
+      return this.$store.getters.isAuthenticated;
+    }
+  },
+
+  methods: {
+    logout(){
+      return this.$store.commit("logOut");
+    }
+  },
 };
 </script>
 
