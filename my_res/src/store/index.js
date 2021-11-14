@@ -3,8 +3,8 @@ import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
-    isLoggedIn: false,
-    username: "",
+    // isLoggedIn: false,
+    // username: "",
 
     items: [],
     total: 0,
@@ -67,6 +67,19 @@ const store = createStore({
         parseInt(prodData.price) * parseInt(prodData.qty)
       );
     },
+
+    logIn(state) {
+      state.isLoggedIn = true;
+    },
+    logOut(state) {
+      state.isLoggedIn = false;
+    },
+    updateUsername(state, payload) {
+      state.username = payload;
+    },
+    deleteUsername(state) {
+      state.username = "";
+    },
   },
 
   actions: {
@@ -86,17 +99,14 @@ const store = createStore({
       context.commit("removeProductFromCart", payload);
     },
 
-    logIn(state) {
-      state.isLoggedIn = true;
+    logIn(context, payload) {
+      context.commit("logIn");
+      context.commit("updateUsername", payload);
     },
-    logOut(state) {
-      state.isLoggedIn = false;
-    },
-    updateUsername(state, payload) {
-      state.username = payload;
-    },
-    deleteUsername(state) {
-      state.username = "";
+
+    logOut(context) {
+      context.commit("logOut");
+      context.commit("deleteUsername");
     },
   },
   getters: {
@@ -121,17 +131,6 @@ const store = createStore({
     },
     getUsername(state) {
       return state.username;
-    },
-  },
-  actions: {
-    logIn(context, payload) {
-      context.commit("logIn");
-      context.commit("updateUsername", payload);
-    },
-
-    logOut(context) {
-      context.commit("logOut");
-      context.commit("deleteUsername");
     },
   },
 });

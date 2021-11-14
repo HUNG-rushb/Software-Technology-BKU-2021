@@ -2,21 +2,21 @@
   <div>
     <Header />
 
-    <HeaderVideo />
-
-    <CheckCart />
+    <!-- <HeaderVideo /> -->
 
     <OrderButton />
 
-    <ReviewFood />
-
     <AddToast />
+
+    <CheckCart />
+
+    <ReviewFood />
 
     <HomeMenu />
 
-    <GoogleMap />
+    <!-- <GoogleMap />
 
-    <Footer />
+    <Footer /> -->
 
     <!-- <UpdateDataFirebase /> -->
   </div>

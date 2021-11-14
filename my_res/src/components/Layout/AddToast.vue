@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="toast-container fixed-top">
+  <div class="fixed-top">
+    <div class="toast-container">
       <div
         id="liveToast"
         class="toast"
@@ -57,8 +57,8 @@ export default {
 <style scoped>
 .toast-container {
   position: absolute;
-  right: 1rem;
-  top: 9rem;
+  right: 9rem;
+  top: 5rem;
 }
 
 .toast {
