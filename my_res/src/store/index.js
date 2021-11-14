@@ -5,7 +5,6 @@ const store = createStore({
   state: {
     isLoggedIn: false,
     username: "",
-
     items: [],
     total: 0,
     qty: 0,
@@ -72,13 +71,11 @@ const store = createStore({
   actions: {
     addToCart(context, payload) {
       const product = menu.value.find((prod) => prod.id === payload.id);
-
       context.commit("addProductToCart", product);
     },
 
     minusOneItem(context, payload) {
       const product = menu.value.find((prod) => prod.id === payload.id);
-
       context.commit("minusOneFood", product);
     },
 
@@ -86,18 +83,18 @@ const store = createStore({
       context.commit("removeProductFromCart", payload);
     },
 
-    logIn(state) {
-      state.isLoggedIn = true;
-    },
-    logOut(state) {
-      state.isLoggedIn = false;
-    },
-    updateUsername(state, payload) {
-      state.username = payload;
-    },
-    deleteUsername(state) {
-      state.username = "";
-    },
+    // logIn(state) {
+    //   state.isLoggedIn = true;
+    // },
+    // logOut(state) {
+    //   state.isLoggedIn = false;
+    // },
+    // updateUsername(state, payload) {
+    //   state.username = payload;
+    // },
+    // deleteUsername(state) {
+    //   state.username = "";
+    // },
   },
   getters: {
     products(state) {
