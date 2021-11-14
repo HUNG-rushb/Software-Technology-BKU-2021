@@ -5,10 +5,11 @@ const store = createStore({
   state: {
 
 
+
     isLoggedIn: false,
     username: "",
 
-    
+
     items: [],
     total: 0,
     qty: 0,
@@ -19,7 +20,7 @@ const store = createStore({
       const productData = payload;
 
       const productInCartIndex = state.items.findIndex(
-        (ci) => ci.productId === productData.id
+        (ci) => ci.id === productData.id
       );
 
       if (productInCartIndex >= 0) {
@@ -27,7 +28,7 @@ const store = createStore({
       } else {
         const newItem = {
           name: productData.name,
-          productId: productData.id,
+          id: productData.id,
           title: productData.title,
           image: productData.image,
           price: productData.price,
@@ -37,30 +38,62 @@ const store = createStore({
       }
 
       state.qty++;
-      state.total += productData.price;
-
-      console.log(state.items);
+      state.total += parseInt(productData.price);
     },
 
-    // removeProductFromCart(state, payload) {
-    //   const prodId = payload.productId;
-    //   const productInCartIndex = state.items.findIndex(
-    //     (cartItem) => cartItem.productId === prodId
-    //   );
-    //   const prodData = state.items[productInCartIndex];
-    //   state.items.splice(productInCartIndex, 1);
-    //   state.qty -= prodData.qty;
-    //   state.total -= prodData.price * prodData.qty;
-    // },
+    minusOneFood(state, payload) {
+      const productData = payload;
+
+      const productInCartIndex = state.items.findIndex(
+        (ci) => ci.id === productData.id
+      );
+
+      if (state.items[productInCartIndex].qty === 1) {
+        return;
+      } else {
+        state.items[productInCartIndex].qty--;
+        state.qty--;
+        state.total -= parseInt(productData.price);
+      }
+    },
+
+    removeProductFromCart(state, payload) {
+      const productInCartIndex = state.items.findIndex(
+        (cartItem) => cartItem.id === payload.id
+      );
+
+      const prodData = state.items[productInCartIndex];
+
+      state.items.splice(productInCartIndex, 1);
+
+      state.qty -= prodData.qty;
+
+      state.total -= parseInt(
+        parseInt(prodData.price) * parseInt(prodData.qty)
+      );
+    },
   },
 
   actions: {
     addToCart(context, payload) {
-      const prodId = payload.id;
+      // const prodId = payload.id;
 
-      const product = menu.value.find((prod) => prod.id === prodId);
+      const product = menu.value.find((prod) => prod.id === payload.id);
 
       context.commit("addProductToCart", product);
+    },
+
+
+    minusOneItem(context, payload) {
+      // const prodId = payload.id;
+
+      const product = menu.value.find((prod) => prod.id === payload.id);
+
+      context.commit("minusOneFood", product);
+    },
+
+    removeFromCart(context, payload) {
+      context.commit("removeProductFromCart", payload);
     },
 
     logIn(state){
@@ -87,6 +120,7 @@ const store = createStore({
     quantity(state) {
       return state.qty;
     },
+
     isLoggedIn(state) {
       return state.isLoggedIn;
     },
@@ -110,8 +144,8 @@ const store = createStore({
       context.commit("logOut");
       context.commit("deleteUsername");
     }
+
   },
-  modules: {},
 });
 
 export default store;

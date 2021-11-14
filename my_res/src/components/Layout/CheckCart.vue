@@ -29,7 +29,8 @@
       </div>
 
       <div class="offcanvas-header ">
-        <h5 style="display:block;">{{ counter }} món</h5>
+        <h5>{{ counter }} món</h5>
+        <h5>{{ totalSum }}</h5>
       </div>
 
       <div v-if="chosenFoods.length === 0" class="offcanvas-body">
@@ -42,10 +43,6 @@
           :key="food.id"
           :id="food.id"
         />
-
-        <router-link class="btn btn-success" to="/order/cart">
-          Thanh toán
-        </router-link>
       </div>
     </div>
   </div>
@@ -66,6 +63,12 @@ export default {
     counter() {
       return this.$store.getters.quantity;
     },
+    totalSum() {
+      return parseInt(this.$store.getters.totalSum).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
   },
   components: { ShoppingCart, ItemCard },
 };
@@ -77,10 +80,6 @@ export default {
   position: absolute;
   right: 1rem;
   top: 5rem;
-}
-
-.btn-success {
-  width: 100%;
 }
 
 .offcanvas-header {

@@ -18,7 +18,7 @@ const menu = {
   "3": {
     id: Math.floor(Math.random() * 10000),
     name: "BÚN CHẢ CÁ QUY NHƠN",
-    Image: "",
+    image: "",
     description:
       "Bún chả cá Quy Nhơn là sự kết hợp của những lát chả cá thơm ngon, nước lèo nấu từ cá, vị chua nhẹ của cà chua chín và thơm hòa quyện vào nhau tạo cảm giác rất đặc biệt.",
     price: "45000",

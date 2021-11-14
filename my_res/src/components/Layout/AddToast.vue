@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="toast-container">
+    <div class="toast-container fixed-top">
       <div
         id="liveToast"
         class="toast"

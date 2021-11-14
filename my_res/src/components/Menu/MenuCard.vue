@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card shadow-lg">
-      <img :src="image" class="card-img-top" />
+      <img :src="image" class="card-img-top" alt="..." />
 
       <div class="card-body">
         <h5 class="card-title">

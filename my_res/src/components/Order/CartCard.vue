@@ -3,41 +3,23 @@
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img
-            src="../../assets/Order/bunbo.jpg"
-            class="img-fluid rounded-start"
-            alt="..."
-          />
+          <img :src="image" class="img-fluid rounded-start" alt="..." />
         </div>
 
         <div class="col-md-8">
           <div class="card-body">
-            <!-- Tên món và giới thiệu  -->
-            <h4 class="card-title">Bún bò Huế</h4>
+            <div class="card-title">{{ food.name }}</div>
 
-            <p class="card-text">
-              Bún bò là một trong những đặc sản của xứ Huế, mặc dù món bún này
-              phổ biến trên cả ba miền ở Việt Nam và cả người Việt tại hải
-              ngoại.
-            </p>
+            <div class="quantity">
+              <i class="bi bi-dash-circle-fill" @click="decraseItemHandler" />
 
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+              <p>{{ quantity }}</p>
 
-            <!-- https://shaack.com/projekte/bootstrap-input-spinner/ -->
-            <input
-              type="number"
-              min="1"
-              max="100"
-              step="1"
-              id="numberinput"
-              v-model="quantity"
-            />
+              <i class="bi bi-plus-circle-fill" @click="addItemHandler" />
+            </div>
 
-            <!-- Delete Button  -->
-            <button type="button" class="btn btn-danger">
-              <i class="bi bi-trash-fill"> Bỏ chọn</i>
+            <button type="button" class="btn btn-danger" @click="deleteHandler">
+              <i class="bi bi-trash-fill" />
             </button>
           </div>
         </div>
@@ -47,25 +29,59 @@
 </template>
 
 <script>
-// $("input[type='number']").inputSpinner();
-
 export default {
-  data() {
-    return {
-      quantity: null,
-    };
+  props: ["food", "id"],
+
+  computed: {
+    quantity() {
+      return this.food.qty;
+    },
+    image() {
+      return this.food.image;
+    },
+  },
+  methods: {
+    deleteHandler() {
+      this.$store.dispatch("removeFromCart", {
+        id: this.id,
+        price: this.food.price,
+        qty: this.food.qty,
+      });
+    },
+    addItemHandler() {
+      this.$store.dispatch("addToCart", {
+        id: this.id,
+      });
+    },
+    decraseItemHandler() {
+      this.$store.dispatch("minusOneItem", {
+        id: this.id,
+      });
+    },
   },
 };
 </script>
 
 <style scoped>
+.quantity i,
+.quantity p {
+  display: inline-block;
+}
+
+.quantity p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .card {
   border: 2px solid #494449;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  background-image: url("../../assets/Order/lotus.jpg");
+  /* background-image: url("../../assets/Order/lotus.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  font-size: 1rem;
 }
 
 img {
@@ -76,10 +92,6 @@ img {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
-/* #numberinput {
-  
-} */
 
 .btn {
   position: absolute;
