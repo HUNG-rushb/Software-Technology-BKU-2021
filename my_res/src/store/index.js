@@ -3,17 +3,12 @@ import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
-
-
-
     isLoggedIn: false,
     username: "",
-
 
     items: [],
     total: 0,
     qty: 0,
-
   },
   mutations: {
     addProductToCart(state, payload) {
@@ -76,17 +71,12 @@ const store = createStore({
 
   actions: {
     addToCart(context, payload) {
-      // const prodId = payload.id;
-
       const product = menu.value.find((prod) => prod.id === payload.id);
 
       context.commit("addProductToCart", product);
     },
 
-
     minusOneItem(context, payload) {
-      // const prodId = payload.id;
-
       const product = menu.value.find((prod) => prod.id === payload.id);
 
       context.commit("minusOneFood", product);
@@ -96,19 +86,18 @@ const store = createStore({
       context.commit("removeProductFromCart", payload);
     },
 
-    logIn(state){
+    logIn(state) {
       state.isLoggedIn = true;
     },
-    logOut(state){
+    logOut(state) {
       state.isLoggedIn = false;
     },
-    updateUsername(state, payload){
+    updateUsername(state, payload) {
       state.username = payload;
     },
-    deleteUsername(state){
+    deleteUsername(state) {
       state.username = "";
-    }
-
+    },
   },
   getters: {
     products(state) {
@@ -127,24 +116,23 @@ const store = createStore({
     username(state) {
       return state.username;
     },
-    isAuthenticated(state){
+    isAuthenticated(state) {
       return state.isLoggedIn;
     },
-    getUsername(state){
+    getUsername(state) {
       return state.username;
-    }
+    },
   },
   actions: {
-    logIn(context, payload){
+    logIn(context, payload) {
       context.commit("logIn");
       context.commit("updateUsername", payload);
     },
 
-    logOut(context){
+    logOut(context) {
       context.commit("logOut");
       context.commit("deleteUsername");
-    }
-
+    },
   },
 });
 

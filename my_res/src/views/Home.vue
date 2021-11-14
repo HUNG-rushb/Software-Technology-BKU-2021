@@ -1,22 +1,22 @@
 <template>
   <div>
-    <!-- <Header /> -->
+    <Header />
 
-    <!-- <HeaderVideo /> -->
+    <HeaderVideo />
 
     <CheckCart />
 
     <OrderButton />
 
-    <!-- <ReviewFood /> -->
+    <ReviewFood />
 
-    <!-- <AddToast /> -->
+    <AddToast />
 
     <HomeMenu />
 
-    <!-- <GoogleMap />
+    <GoogleMap />
 
-    <Footer /> -->
+    <Footer />
 
     <!-- <UpdateDataFirebase /> -->
   </div>
