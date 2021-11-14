@@ -3,8 +3,9 @@ import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
-    // isLoggedIn: false,
-    // username: "",
+
+    isLoggedIn: false,
+    username: "",
 
     items: [],
     total: 0,
@@ -85,13 +86,11 @@ const store = createStore({
   actions: {
     addToCart(context, payload) {
       const product = menu.value.find((prod) => prod.id === payload.id);
-
       context.commit("addProductToCart", product);
     },
 
     minusOneItem(context, payload) {
       const product = menu.value.find((prod) => prod.id === payload.id);
-
       context.commit("minusOneFood", product);
     },
 

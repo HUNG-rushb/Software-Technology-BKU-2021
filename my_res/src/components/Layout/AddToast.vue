@@ -31,19 +31,16 @@ import { inject } from "vue";
 import { Toast } from "bootstrap";
 // import { Toast } from "bootstrap/dist/js/bootstrap.esm.min.js"; Double bootstrap error
 // 0:42 2/11/2021
-
 export default {
   setup() {
     // https://forum.vuejs.org/t/vue-3-call-a-method-from-setup/112084
     // https://stackoverflow.com/questions/64746129/how-to-call-method-in-setup-of-vuejs3-app
     const emitter = inject("emitter"); // Inject `emitter`
-
     const alertToast = () => {
       var toastLive = document.getElementById("liveToast");
       var toast = new Toast(toastLive);
       toast.show();
     };
-
     emitter.on("add-item", () => {
       alertToast();
     });
@@ -60,7 +57,6 @@ export default {
   right: 9rem;
   top: 5rem;
 }
-
 .toast {
   width: auto;
 }
