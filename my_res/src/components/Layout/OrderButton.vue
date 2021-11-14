@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed-top">
     <router-link to="/order/cart" class="btn btn-success" id="ordernow">
       Thanh toán
     </router-link>
@@ -12,7 +12,7 @@ export default {};
 
 <style scoped>
 #ordernow {
-  position: fixed;
+  position: absolute;
   right: 1rem;
   top: 8rem;
 }

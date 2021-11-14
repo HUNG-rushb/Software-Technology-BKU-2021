@@ -23,7 +23,7 @@
                                 <tbody>
                                   <tr>
                                     <td>
-                                      Ngày 1 tháng 11 năm 2021
+                                      {{ getCurrentDate }}
                                     </td>
                                   </tr>
 
@@ -47,24 +47,38 @@
                                             </td>
                                           </tr>
 
-                                          <tr>
-                                            <td>Service 1</td>
-                                            <td class="aligncenter">2</td>
-                                            <td class="alignright">$ 20.00</td>
-                                          </tr>
+                                          <tr
+                                            v-for="food in chosenFoods"
+                                            :key="food.id"
+                                            class="item"
+                                          >
+                                            <td>{{ food.name }}</td>
 
-                                          <tr>
-                                            <td>Service 2</td>
-                                            <td class="aligncenter">3</td>
-                                            <td class="alignright">$ 10.00</td>
+                                            <td class="aligncenter">
+                                              {{ food.qty }}
+                                            </td>
+                                            <td class="alignright">
+                                              {{
+                                                parseInt(
+                                                  food.price * food.qty
+                                                ).toLocaleString("it-IT", {
+                                                  style: "currency",
+                                                  currency: "VND",
+                                                })
+                                              }}
+                                            </td>
                                           </tr>
 
                                           <tr class="total">
                                             <td>
                                               Tổng cộng
                                             </td>
-                                            <td class="aligncenter"></td>
-                                            <td class="alignright">$ 36.00</td>
+                                            <td class="aligncenter">
+                                              {{ counter }}
+                                            </td>
+                                            <td class="alignright">
+                                              {{ totalSum }}
+                                            </td>
                                           </tr>
                                         </tbody>
                                       </table>
@@ -98,10 +112,37 @@
 // import { inject } from "vue";
 
 export default {
-  setup() {
-    // const emitter = inject("emitter");
+  data() {
+    return {
+      chosenFoods: this.$store.getters.products,
+    };
   },
-  methods: {},
+  computed: {
+    counter() {
+      return this.$store.getters.quantity;
+    },
+    totalSum() {
+      return parseInt(this.$store.getters.totalSum).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
+    getCurrentDate() {
+      const browserLocale =
+        navigator.languages && navigator.languages.length
+          ? navigator.languages[0]
+          : navigator.language;
+      const intlDateTime = new Intl.DateTimeFormat(browserLocale, {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+      });
+
+      return intlDateTime.format(new Date());
+    },
+  },
 };
 </script>
 
@@ -110,7 +151,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 img {
@@ -186,9 +227,11 @@ body {
   color: #999;
   padding: 20px;
 }
+
 .footer a {
   color: #999;
 }
+
 .footer p,
 .footer a,
 .footer unsubscribe,

@@ -3,11 +3,7 @@
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img
-            src="../../assets/logo.jpg"
-            class="img-fluid rounded-start"
-            alt="..."
-          />
+          <img :src="image" class="img-fluid rounded-start" alt="..." />
         </div>
 
         <div class="col-md-8">
@@ -37,11 +33,7 @@
 <script>
 export default {
   props: ["food", "id"],
-  data() {
-    return {
-      // qty: this.food.qty,
-    };
-  },
+
   computed: {
     quantity() {
       return this.food.qty;
@@ -51,6 +43,9 @@ export default {
         style: "currency",
         currency: "VND",
       });
+    },
+    image() {
+      return this.food.image;
     },
   },
   methods: {

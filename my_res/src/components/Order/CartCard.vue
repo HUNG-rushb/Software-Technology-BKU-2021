@@ -3,16 +3,12 @@
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img
-            src="../../assets/Order/bunbo.jpg"
-            class="img-fluid rounded-start"
-            alt="..."
-          />
+          <img :src="image" class="img-fluid rounded-start" alt="..." />
         </div>
 
         <div class="col-md-8">
           <div class="card-body">
-            <h4 class="card-title">{{ food.name }}</h4>
+            <div class="card-title">{{ food.name }}</div>
 
             <div class="quantity">
               <i class="bi bi-dash-circle-fill" @click="decraseItemHandler" />
@@ -39,6 +35,9 @@ export default {
   computed: {
     quantity() {
       return this.food.qty;
+    },
+    image() {
+      return this.food.image;
     },
   },
   methods: {
@@ -81,6 +80,8 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  font-size: 1rem;
 }
 
 img {
