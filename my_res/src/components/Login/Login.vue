@@ -64,7 +64,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </label>
                 <div class="clear"></div>
               </div>
-              <input type="submit" value="Đăng nhập" />
+              <router-link to="/home" @click="login">
+                <input type="submit" value="Đăng nhập" />
+              </router-link>
             </form>
             <p class="no-account">
               Không có tài khoản? <a href="/register"> Đăng ký ngay!</a>
@@ -81,6 +83,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script>
 export default {
   name: "Login",
+
+  methods: {
+    login(){
+      this.$store.dispatch("logIn", document.getElementsByName("username")[0].value);
+      return;
+    },
+  },
 };
 </script>
 
