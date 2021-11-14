@@ -3,8 +3,10 @@ import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
+
     isLoggedIn: false,
     username: "",
+
     items: [],
     total: 0,
     qty: 0,
