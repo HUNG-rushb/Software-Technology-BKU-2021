@@ -56,6 +56,7 @@
           </ul>
 
           <form>
+
             <span v-if="isLoggedIn">{{ username }}</span>
 
             <router-link v-if="!isLoggedIn" class="btn" to="/login" id="login">
@@ -70,6 +71,7 @@
               <!-- <i class="bi bi-person-plus-fill" v-if ></i> Đăng xuất -->
               <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
             </button>
+
           </form>
         </div>
       </div>
@@ -79,6 +81,7 @@
 
 <script>
 export default {
+
   data(){
     return { 
       username: this.$store.getters.getUsername,
@@ -96,6 +99,7 @@ export default {
       this.$store.dispatch("logOut");
       return;
     }
+
   },
 };
 </script>
