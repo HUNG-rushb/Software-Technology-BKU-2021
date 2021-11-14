@@ -3,11 +3,16 @@ import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
-    username: "",
+
+
     isLoggedIn: false,
+    username: "",
+
+    
     items: [],
     total: 0,
     qty: 0,
+
   },
   mutations: {
     addProductToCart(state, payload) {
@@ -58,9 +63,19 @@ const store = createStore({
       context.commit("addProductToCart", product);
     },
 
-    // removeFromCart(context, payload) {
-    //   context.commit("removeProductFromCart", payload);
-    // },
+    logIn(state){
+      state.isLoggedIn = true;
+    },
+    logOut(state){
+      state.isLoggedIn = false;
+    },
+    updateUsername(state, payload){
+      state.username = payload;
+    },
+    deleteUsername(state){
+      state.username = "";
+    }
+
   },
   getters: {
     products(state) {
@@ -78,6 +93,23 @@ const store = createStore({
     username(state) {
       return state.username;
     },
+    isAuthenticated(state){
+      return state.isLoggedIn;
+    },
+    getUsername(state){
+      return state.username;
+    }
+  },
+  actions: {
+    logIn(context, payload){
+      context.commit("logIn");
+      context.commit("updateUsername", payload);
+    },
+
+    logOut(context){
+      context.commit("logOut");
+      context.commit("deleteUsername");
+    }
   },
   modules: {},
 });

@@ -56,22 +56,22 @@
           </ul>
 
           <form>
-            <div v-if="isLogIn === false">
-              <router-link class="btn" to="/login" id="login">
-                <i class="bi bi-person-fill"></i> Đăng nhập
-              </router-link>
 
-              <router-link class="btn" to="/register" id="register">
-                <i class="bi bi-person-plus-fill"></i> Đăng kí
-              </router-link>
-            </div>
+            <span v-if="isLoggedIn">{{ username }}</span>
 
-            <div v-if="isLogIn === true">
-              <!-- <span></span> -->
-              <button class="btn btn-danger">
-                <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
-              </button>
-            </div>
+            <router-link v-if="!isLoggedIn" class="btn" to="/login" id="login">
+              <i class="bi bi-person-fill"></i> Đăng nhập
+            </router-link>
+
+            <router-link v-if="!isLoggedIn" class="btn" to="/register" id="register">
+              <i class="bi bi-person-plus-fill"></i> Đăng kí
+            </router-link>
+
+            <button v-if="isLoggedIn" @click="logout" class="btn btn-danger">
+              <!-- <i class="bi bi-person-plus-fill" v-if ></i> Đăng xuất -->
+              <i class="bi bi-box-arrow-right" id="logout"></i> Đăng xuất
+            </button>
+
           </form>
         </div>
       </div>
@@ -81,11 +81,25 @@
 
 <script>
 export default {
-  methods: {},
+
+  data(){
+    return { 
+      username: this.$store.getters.getUsername,
+    }
+  },
+
   computed: {
-    isLogIn() {
-      return this.$store.getters.isLoggedIn;
-    },
+    isLoggedIn(){
+      return this.$store.getters.isAuthenticated;
+    }
+  },
+
+  methods: {
+    logout(){
+      this.$store.dispatch("logOut");
+      return;
+    }
+
   },
 };
 </script>
@@ -119,6 +133,12 @@ export default {
   border: 1px solid #a4dd8e;
 }
 
+span{
+  color: #ffffff;
+  font-size: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 /* ------------------------------------- */
 /* ------------------------------------- */
 .main-header {
