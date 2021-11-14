@@ -4,13 +4,13 @@
 
     <HeaderVideo />
 
-    <CheckCart />
-
     <OrderButton />
 
     <ReviewFood />
 
     <AddToast />
+
+    <CheckCart />
 
     <HomeMenu />
 
