@@ -1,7 +1,6 @@
 <template>
   <div>
     <main>
-      <!-- <router-view /> -->
       <router-view v-slot="slotProps">
         <transition name="fade" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -12,26 +11,27 @@
 </template>
 
 <script>
-export default {
-  components: {},
-};
+export default {};
 </script>
 
 <style>
 /* Import Bootstrap */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+
 /* Import Google Font  */
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:100,400,900");
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700"); */
-/* #8e9189, #494449, #857f74, #eeefeb, #ddeac1  */
+
 * {
   box-sizing: border-box;
 }
+
 html {
   height: 100%;
 }
+
 body {
   /* font-family: "Montserrat", sans-serif; */
   margin: 0;
@@ -55,3 +55,4 @@ body {
 .fade-leave-from {
   opacity: 1;
 }
+</style>

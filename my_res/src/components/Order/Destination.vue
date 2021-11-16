@@ -5,7 +5,8 @@
     <Progress :barWidth="66" :first="true" :second="true" :third="false" />
 
     <div @submit.prevent="submitForm" id="dest">
-      <form class="row g-3 needs-validation was-validated">
+      <!-- was-validated -->
+      <form class="row g-3 needs-validation ">
         <div class="col-md-4">
           <div class="form-floating mb-3">
             <input
@@ -169,6 +170,24 @@ import tphcm from "../../data/tphcm";
 
 export default {
   components: { Progress, Header, Footer },
+  setup() {
+    var forms = document.getElementsByClassName("needs-validation");
+
+    Array.prototype.filter.call(forms, (form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  },
   data() {
     return {
       recvName: "",
