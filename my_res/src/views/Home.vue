@@ -4,11 +4,11 @@
 
     <!-- <HeaderVideo /> -->
 
-    <!-- <OrderButton /> -->
+    <OrderButton />
 
     <!-- <AddToast /> -->
 
-    <!-- <CheckCart /> -->
+    <CheckCart />
 
     <!-- <ReviewFood /> -->
 

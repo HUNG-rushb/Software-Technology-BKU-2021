@@ -203,11 +203,11 @@
               </label>
             </div>
 
-            <!-- <ul class="list-group">
+            <ul class="list-group">
               <li class="list-group-item"><MoMo /></li>
               <li class="list-group-item"><ZaloPay /></li>
               <li class="list-group-item"><VNPay /></li>
-            </ul> -->
+            </ul>
 
             <hr class="mb-4" />
           </form>
@@ -239,7 +239,7 @@
       </div>
     </div>
 
-    <MoMoOfficial />
+    <!-- <MoMoOfficial /> -->
     <!-- <Footer /> -->
   </div>
 </template>
