@@ -2,25 +2,23 @@
   <div>
     <Header />
 
-
     <!-- <HeaderVideo /> -->
 
+    <!-- <OrderButton /> -->
 
+    <!-- <AddToast /> -->
 
-    <OrderButton />
+    <!-- <CheckCart /> -->
 
-    <AddToast />
-
-    <CheckCart />
-
-
-    <ReviewFood />
+    <!-- <ReviewFood /> -->
 
     <HomeMenu />
 
-    <!-- <GoogleMap />
+    <!-- <GoogleMap /> -->
 
-    <Footer /> -->
+    <!-- <Footer /> -->
+
+    <!-- <ZaloChat /> -->
 
     <!-- <UpdateDataFirebase /> -->
   </div>
@@ -36,6 +34,7 @@ import HomeMenu from "../components/Home/HomeMenu.vue";
 import GoogleMap from "../components/Home/GoogleMap.vue";
 import Footer from "../components/Layout/Footer.vue";
 import ReviewFood from "../components/Layout/ReviewFood.vue";
+import ZaloChat from "../components/Layout/ZaloChat.vue";
 
 import UpdateDataFirebase from "../components/shared/UpdateFirebaseData.vue";
 
@@ -51,6 +50,7 @@ export default {
     GoogleMap,
     ReviewFood,
     UpdateDataFirebase,
+    ZaloChat,
   },
 };
 </script>

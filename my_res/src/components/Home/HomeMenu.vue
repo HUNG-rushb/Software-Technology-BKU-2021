@@ -18,5 +18,6 @@ export default {
 <style scoped>
 .homegrid {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 </style>

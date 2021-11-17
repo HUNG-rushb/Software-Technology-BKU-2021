@@ -1,5 +1,5 @@
-const tphcm = {
-  "760": {
+const tphcm = [
+  {
     name: "1",
     name_with_type: "Quận 1",
     wards: {
@@ -45,7 +45,7 @@ const tphcm = {
       },
     },
   },
-  "761": {
+  {
     name: "12",
     name_with_type: "Quận 12",
     wards: {
@@ -95,7 +95,7 @@ const tphcm = {
       },
     },
   },
-  "764": {
+  {
     name: "Gò Vấp",
     name_with_type: "Quận Gò Vấp",
     wards: {
@@ -165,7 +165,7 @@ const tphcm = {
       },
     },
   },
-  "765": {
+  {
     name: "Bình Thạnh",
     name_with_type: "Quận Bình Thạnh",
     wards: {
@@ -250,7 +250,7 @@ const tphcm = {
       },
     },
   },
-  "766": {
+  {
     name: "Tân Bình",
     name_with_type: "Quận Tân Bình",
     wards: {
@@ -316,7 +316,7 @@ const tphcm = {
       },
     },
   },
-  "767": {
+  {
     name: "Tân Phú",
     name_with_type: "Quận Tân Phú",
     wards: {
@@ -366,7 +366,7 @@ const tphcm = {
       },
     },
   },
-  "768": {
+  {
     name: "Phú Nhuận",
     name_with_type: "Quận Phú Nhuận",
     wards: {
@@ -424,7 +424,7 @@ const tphcm = {
       },
     },
   },
-  "769": {
+  {
     name: "Thủ Đức",
     name_with_type: "Thành phố Thủ Đức",
     wards: {
@@ -568,7 +568,7 @@ const tphcm = {
       },
     },
   },
-  "770": {
+  {
     name: "3",
     name_with_type: "Quận 3",
     wards: {
@@ -622,7 +622,7 @@ const tphcm = {
       },
     },
   },
-  "771": {
+  {
     name: "10",
     name_with_type: "Quận 10",
     wards: {
@@ -684,7 +684,7 @@ const tphcm = {
       },
     },
   },
-  "772": {
+  {
     name: "11",
     name_with_type: "Quận 11",
     wards: {
@@ -754,7 +754,7 @@ const tphcm = {
       },
     },
   },
-  "773": {
+  {
     name: "4",
     name_with_type: "Quận 4",
     wards: {
@@ -812,7 +812,7 @@ const tphcm = {
       },
     },
   },
-  "774": {
+  {
     name: "5",
     name_with_type: "Quận 5",
     wards: {
@@ -874,7 +874,7 @@ const tphcm = {
       },
     },
   },
-  "775": {
+  {
     name: "6",
     name_with_type: "Quận 6",
     wards: {
@@ -936,7 +936,7 @@ const tphcm = {
       },
     },
   },
-  "776": {
+  {
     name: "8",
     name_with_type: "Quận 8",
     wards: {
@@ -1006,7 +1006,7 @@ const tphcm = {
       },
     },
   },
-  "777": {
+  {
     name: "Bình Tân",
     name_with_type: "Quận Bình Tân",
     wards: {
@@ -1052,7 +1052,7 @@ const tphcm = {
       },
     },
   },
-  "778": {
+  {
     name: "7",
     name_with_type: "Quận 7",
     wards: {
@@ -1118,6 +1118,6 @@ const tphcm = {
   //     name: "Cần Giờ",
   //     name_with_type: "Huyện Cần Giờ",
   //   },
-};
+];
 
 export default tphcm;

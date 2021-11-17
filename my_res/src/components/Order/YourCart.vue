@@ -2,7 +2,7 @@
   <div>
     <Header />
 
-    <Progress :barWidth="33" :first="true" :second="false" :third="false" />
+    <!-- <Progress :barWidth="33" :first="true" :second="false" :third="false" /> -->
 
     <div id="yourcart">
       <div class="row">
@@ -35,7 +35,7 @@
 
               <div class="col">
                 <div class="p-3">
-                  <router-link to="/order/destination" class="btn btn-success">
+                  <router-link to="/order/confirm" class="btn btn-success">
                     Tiếp tục
                   </router-link>
                 </div>
