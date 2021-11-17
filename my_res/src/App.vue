@@ -1,7 +1,6 @@
 <template>
   <div>
     <main>
-      <!-- <router-view /> -->
       <router-view v-slot="slotProps">
         <transition name="fade" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -12,9 +11,7 @@
 </template>
 
 <script>
-export default {
-  components: {},
-};
+export default {};
 </script>
 
 <style>
@@ -27,7 +24,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700"); */
 
-/* #8e9189, #494449, #857f74, #eeefeb, #ddeac1  */
 * {
   box-sizing: border-box;
 }

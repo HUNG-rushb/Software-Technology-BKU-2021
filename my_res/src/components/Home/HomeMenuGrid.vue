@@ -2,23 +2,14 @@
   <div>
     <div class="container overflow-hidden">
       <div class="row gy-3">
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
-        </div>
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
-        </div>
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
-        </div>
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
-        </div>
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
-        </div>
-        <div class="col-4" data-aos="zoom-in-up" data-aos-once="true">
-          <FoodCard />
+        <div
+          v-for="item in menu"
+          :key="item.id"
+          class="col-4"
+          data-aos="zoom-in-up"
+          data-aos-once="true"
+        >
+          <FoodCard :food="item" :id="item.id" />
         </div>
       </div>
     </div>
@@ -27,9 +18,16 @@
 
 <script>
 import FoodCard from "./FoodCard.vue";
+import getMenu from "../../firebase/getMenu";
 
 export default {
   components: { FoodCard },
+  data() {
+    return {
+      menu: getMenu,
+    };
+  },
+
   methods: {},
 };
 </script>

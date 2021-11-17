@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div class="fixed-top">
     <button
       type="button"
-      class="btn"
+      class="btn btn-floating btn-lg"
       @click="topFunction"
       title="Trở về đầu trang"
+      id="btn-back-to-top"
     >
-      <i class="bi bi-chevron-double-up"></i>
+      <i class="bi bi-arrow-up"></i>
     </button>
   </div>
 </template>
@@ -19,20 +20,33 @@ export default {
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     },
   },
+  mounted() {
+    let mybutton = document.getElementById("btn-back-to-top");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = () => {
+      scrollFunction();
+    };
+    const scrollFunction = () => {
+      if (
+        document.body.scrollTop > 150 ||
+        document.documentElement.scrollTop > 150
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    };
+  },
 };
 </script>
 
 <style scoped>
-.btn {
-  background-color: #c47fa1;
-
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+#btn-back-to-top {
+  background-color: #9eeeab;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  border-radius: 10px;
 }
 </style>

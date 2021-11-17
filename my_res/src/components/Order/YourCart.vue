@@ -2,23 +2,15 @@
   <div>
     <Header />
 
-    <Progress :barWidth="33" :first="true" :second="false" :third="false" />
+    <!-- <Progress :barWidth="33" :first="true" :second="false" :third="false" /> -->
 
     <div id="yourcart">
       <div class="row">
         <div class="col-md-7">
           <div class="container overflow-hidden">
             <div class="row gy-3">
-              <div class="col-6">
-                <CartCard />
-              </div>
-
-              <div class="col-6">
-                <CartCard />
-              </div>
-
-              <div class="col-6">
-                <CartCard />
+              <div v-for="food in chosenFoods" class="col-6" :key="food.id">
+                <CartCard :id="food.id" :food="food" />
               </div>
             </div>
           </div>
@@ -43,7 +35,7 @@
 
               <div class="col">
                 <div class="p-3">
-                  <router-link to="/order/destination" class="btn btn-success">
+                  <router-link to="/order/confirm" class="btn btn-success">
                     Tiếp tục
                   </router-link>
                 </div>
@@ -68,6 +60,11 @@ import Invoice from "./Invoice.vue";
 export default {
   components: { Header, CartCard, Invoice, Progress, Footer },
   methods: {},
+  computed: {
+    chosenFoods() {
+      return this.$store.getters.products;
+    },
+  },
 };
 </script>
 

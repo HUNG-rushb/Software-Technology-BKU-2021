@@ -7,10 +7,9 @@
 
 <script>
 export default {
-  //   props: { count: Number },
   computed: {
     counter() {
-      return this.$store.getters.finalItemCount;
+      return this.$store.getters.quantity;
     },
   },
 };

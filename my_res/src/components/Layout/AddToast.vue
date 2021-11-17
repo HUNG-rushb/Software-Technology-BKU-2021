@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed-top">
     <div class="toast-container">
       <div
         id="liveToast"
@@ -11,7 +11,7 @@
         <div class="d-flex">
           <div class="toast-body">
             <i class="bi bi-check-circle-fill"></i>
-            <b>Thêm vào giỏ hàng thành công!</b>
+            <b> Thêm vào giỏ hàng thành công!</b>
           </div>
 
           <button
@@ -31,19 +31,16 @@ import { inject } from "vue";
 import { Toast } from "bootstrap";
 // import { Toast } from "bootstrap/dist/js/bootstrap.esm.min.js"; Double bootstrap error
 // 0:42 2/11/2021
-
 export default {
   setup() {
     // https://forum.vuejs.org/t/vue-3-call-a-method-from-setup/112084
     // https://stackoverflow.com/questions/64746129/how-to-call-method-in-setup-of-vuejs3-app
     const emitter = inject("emitter"); // Inject `emitter`
-
     const alertToast = () => {
       var toastLive = document.getElementById("liveToast");
       var toast = new Toast(toastLive);
       toast.show();
     };
-
     emitter.on("add-item", () => {
       alertToast();
     });
@@ -56,11 +53,10 @@ export default {
 
 <style scoped>
 .toast-container {
-  position: fixed;
-  right: 1rem;
-  top: 9rem;
+  position: absolute;
+  right: 9rem;
+  top: 5rem;
 }
-
 .toast {
   width: auto;
 }

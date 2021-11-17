@@ -8,7 +8,7 @@
 
         <div class="col-md-8">
           <div class="card-body">
-            <div class="card-title">{{ food.name }}</div>
+            <h4 class="card-title">{{ food.name }}</h4>
 
             <div class="quantity">
               <i class="bi bi-dash-circle-fill" @click="decraseItemHandler" />
@@ -18,8 +18,10 @@
               <i class="bi bi-plus-circle-fill" @click="addItemHandler" />
             </div>
 
+            <p>{{ total }}</p>
+
             <button type="button" class="btn btn-danger" @click="deleteHandler">
-              <i class="bi bi-trash-fill" />
+              <i class="bi bi-trash-fill"></i>
             </button>
           </div>
         </div>
@@ -35,6 +37,12 @@ export default {
   computed: {
     quantity() {
       return this.food.qty;
+    },
+    total() {
+      return parseInt(this.food.price * this.food.qty).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
     },
     image() {
       return this.food.image;
@@ -59,6 +67,11 @@ export default {
       });
     },
   },
+  watcher: {
+    quantity() {
+      console.log(quantity);
+    },
+  },
 };
 </script>
 
@@ -69,19 +82,17 @@ export default {
 }
 
 .quantity p {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .card {
-  border: 2px solid #494449;
+  /* border: 2px solid #494449; */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* background-image: url("../../assets/Order/lotus.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  font-size: 1rem;
 }
 
 img {
@@ -106,5 +117,17 @@ img {
 .btn:active,
 .btn:focus {
   transform: translateY(-1px);
+}
+
+.food-card_order-count input {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.food-card_order-count {
+  width: 5rem;
 }
 </style>

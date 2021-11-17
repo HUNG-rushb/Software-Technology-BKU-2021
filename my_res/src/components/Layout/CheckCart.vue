@@ -17,7 +17,7 @@
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel"
     >
-      <div class="offcanvas-header">
+      <div class="offcanvas-header ">
         <h5 id="offcanvasRightLabel">Giỏ hàng của bạn</h5>
 
         <button
@@ -28,10 +28,21 @@
         ></button>
       </div>
 
-      <div class="offcanvas-body">
-        <router-link class="btn btn-success" to="/order/cart">
-          Thanh toán
-        </router-link>
+      <div class="offcanvas-header ">
+        <h5>{{ counter }} món</h5>
+        <h5>{{ totalSum }}</h5>
+      </div>
+
+      <div v-if="chosenFoods.length === 0" class="offcanvas-body">
+        Không có gì...
+      </div>
+      <div v-else class="offcanvas-body">
+        <ItemCard
+          v-for="food in chosenFoods"
+          :food="food"
+          :key="food.id"
+          :id="food.id"
+        />
       </div>
     </div>
   </div>
@@ -39,15 +50,27 @@
 
 <script>
 import ShoppingCart from "./ShoppingCart.vue";
+import ItemCard from "./ItemCard.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      chosenFoods: this.$store.getters.products,
+    };
   },
 
-  components: { ShoppingCart },
-
-  methods: {},
+  computed: {
+    counter() {
+      return this.$store.getters.quantity;
+    },
+    totalSum() {
+      return parseInt(this.$store.getters.totalSum).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
+  },
+  components: { ShoppingCart, ItemCard },
 };
 </script>
 
@@ -57,5 +80,9 @@ export default {
   position: absolute;
   right: 1rem;
   top: 5rem;
+}
+
+.offcanvas-header {
+  padding: 0.6rem;
 }
 </style>

@@ -8,7 +8,7 @@ import Feedback from "../views/Feedback.vue";
 
 import Order from "../views/Order.vue";
 import YourCart from "../components/Order/YourCart.vue";
-import Destination from "../components/Order/Destination.vue";
+// import Destination from "../components/Order/Destination.vue";
 import ConfirmOrder from "../components/Order/ConfirmOrder.vue";
 
 import Error_404 from "../views/Page_404.vue";
@@ -56,11 +56,11 @@ const routes = [
         path: "/order/cart",
         component: YourCart,
       },
-      {
-        name: "destination",
-        path: "/order/destination",
-        component: Destination,
-      },
+      // {
+      //   name: "destination",
+      //   path: "/order/destination",
+      //   component: Destination,
+      // },
       {
         name: "confirm",
         path: "/order/confirm",
