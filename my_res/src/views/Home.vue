@@ -12,11 +12,11 @@
 
     <!-- <ReviewFood /> -->
 
-    <!-- <HomeMenu /> -->
+    <HomeMenu />
 
-    <!-- <GoogleMap />
+    <!-- <GoogleMap /> -->
 
-    <Footer /> -->
+    <!-- <Footer /> -->
 
     <!-- <ZaloChat /> -->
 

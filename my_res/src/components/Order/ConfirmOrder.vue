@@ -14,18 +14,25 @@
           <!-- sticky-md-top -->
           <ul class="list-group mb-3">
             <li
+              v-for="food in chosenFoods"
+              :key="food.id"
               class="list-group-item d-flex justify-content-between lh-condensed"
             >
               <div>
-                <h6 class="my-0">Sản phẩm 1</h6>
-                <small class="text-muted">Mô tả</small>
+                <h6 class="my-0">{{ food.name }}</h6>
               </div>
-              <span class="text-muted">20.000 đ</span>
+
+              <span class="text-muted">{{
+                parseInt(food.price * food.qty).toLocaleString("it-IT", {
+                  style: "currency",
+                  currency: "VND",
+                })
+              }}</span>
             </li>
 
             <li class="list-group-item d-flex justify-content-between">
-              <span>Tổng tiền (VNĐ)</span>
-              <strong>60.000 đ</strong>
+              <span>Tổng tiền: </span>
+              <strong>{{ totalSum }}</strong>
             </li>
           </ul>
         </div>
@@ -169,45 +176,38 @@
             <hr class="mb-4" />
 
             <h4 class="mb-3">Thanh toán</h4>
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input
-                  id="credit"
-                  name="paymentMethod"
-                  type="radio"
-                  class="custom-control-input"
-                  checked=""
-                  required=""
-                />
-                <label class="custom-control-label" for="credit">
-                  Thẻ ngân hàng
-                </label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  id="debit"
-                  name="paymentMethod"
-                  type="radio"
-                  class="custom-control-input"
-                  required=""
-                />
-                <label class="custom-control-label" for="debit">
-                  Ví điện tử
-                </label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  id="paypal"
-                  name="paymentMethod"
-                  type="radio"
-                  class="custom-control-input"
-                  required=""
-                />
-                <label class="custom-control-label" for="paypal">
-                  Thanh toán khi nhận hàng
-                </label>
-              </div>
+
+            <!-- <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="option1"
+              />
+              <label class="form-check-label" for="exampleRadios1">
+                Thẻ ATM
+              </label>
+            </div> -->
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="option1"
+              />
+              <label class="form-check-label" for="exampleRadios1">
+                Thanh toán khi nhận hàng
+              </label>
             </div>
+
+            <!-- <ul class="list-group">
+              <li class="list-group-item"><MoMo /></li>
+              <li class="list-group-item"><ZaloPay /></li>
+              <li class="list-group-item"><VNPay /></li>
+            </ul> -->
 
             <hr class="mb-4" />
           </form>
@@ -239,29 +239,42 @@
       </div>
     </div>
 
-    <Footer />
+    <MoMoOfficial />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 import Header from "../Layout/Header.vue";
 import Footer from "../Layout/Footer.vue";
+import ZaloPay from "./ZaloPay.vue";
+import MoMo from "./MoMo.vue";
+import MoMoOfficial from "./MoMoOfficial.vue";
+import VNPay from "./VNPay.vue";
 // import Progress from "./Progress.vue";
 // import tphcm from "../../data/tphcm";
 
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, ZaloPay, MoMo, VNPay, MoMoOfficial },
   data() {
     return {
+      chosenFoods: this.$store.getters.products,
+
       recvName: "",
       recvEmail: "",
       recvTel: "",
       recvAddr: "",
-
-      // tphcm,
     };
   },
 
+  computed: {
+    totalSum() {
+      return parseInt(this.$store.getters.totalSum).toLocaleString("it-IT", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
+  },
   setup() {
     var forms = document.getElementsByClassName("needs-validation");
 
