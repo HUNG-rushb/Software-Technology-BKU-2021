@@ -12,7 +12,6 @@ import YourCart from "../components/Order/YourCart.vue";
 import ConfirmOrder from "../components/Order/ConfirmOrder.vue";
 
 import Error_404 from "../views/Page_404.vue";
-import Test from "../views/Test.vue";
 
 const routes = [
   { path: "/", redirect: "/home" },
@@ -69,11 +68,6 @@ const routes = [
     ],
   },
   { path: "/:notFound(.*)", component: Error_404 },
-  {
-    path: "/test",
-    name: "Test",
-    components: { default: Test },
-  },
 ];
 
 const router = createRouter({

@@ -2,7 +2,7 @@
   <div>
     <div class="row homegrid">
       <div class="col-md-9"><HomeMenuGrid /></div>
-      <div class="col-md-3">add something</div>
+      <div class="col-md-3"></div>
     </div>
   </div>
 </template>

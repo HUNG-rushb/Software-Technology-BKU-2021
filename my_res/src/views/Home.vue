@@ -1,12 +1,14 @@
 <template>
   <div>
-    <!-- <Header /> -->
+    <Header />
 
-    <!-- <HeaderVideo /> -->
+    <HeaderVideo />
 
     <OrderButton />
 
     <AddToast />
+
+    <BackToTop />
 
     <CheckCart />
 
@@ -14,11 +16,11 @@
 
     <HomeMenu />
 
-    <!-- <GoogleMap /> -->
+    <GoogleMap />
 
-    <!-- <Footer /> -->
+    <Footer />
 
-    <!-- <ZaloChat /> -->
+    <ZaloChat />
 
     <!-- <UpdateDataFirebase /> -->
   </div>
@@ -32,6 +34,7 @@ import OrderButton from "../components/Layout/OrderButton.vue";
 import AddToast from "../components/Layout/AddToast.vue";
 import HomeMenu from "../components/Home/HomeMenu.vue";
 import GoogleMap from "../components/Home/GoogleMap.vue";
+import BackToTop from "../components/Layout/BackToTop.vue";
 import Footer from "../components/Layout/Footer.vue";
 import ReviewFood from "../components/Layout/ReviewFood.vue";
 import ZaloChat from "../components/Layout/ZaloChat.vue";
@@ -43,6 +46,7 @@ export default {
     HeaderVideo,
     Header,
     HomeMenu,
+    BackToTop,
     Footer,
     CheckCart,
     OrderButton,

@@ -1,17 +1,13 @@
 <template>
-    <div>
-        <ResetAccount />
-    </div>
+  <div>
+    <ResetAccount />
+  </div>
 </template>
 
 <script>
-import ResetAccount from "../components/ResetAccount/ResetAccount.vue"
+import ResetAccount from "../components/ResetAccount/ResetAccount.vue";
 
 export default {
-    components: {ResetAccount}
-}
+  components: { ResetAccount },
+};
 </script>
-
-<style>
-
-</style>

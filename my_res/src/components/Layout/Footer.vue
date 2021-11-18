@@ -1,6 +1,6 @@
 <template>
   <div loading="lazy">
-    <BackToTop />
+    <!-- <BackToTop /> -->
 
     <footer
       class="footer-distributed"
@@ -53,14 +53,6 @@
     </footer>
   </div>
 </template>
-
-<script>
-import BackToTop from "./BackToTop.vue";
-
-export default {
-  components: { BackToTop },
-};
-</script>
 
 <style scoped>
 /* @import url(

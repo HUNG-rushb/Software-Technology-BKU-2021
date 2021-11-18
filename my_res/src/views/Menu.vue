@@ -19,5 +19,3 @@ export default {
   components: { MenuGrid, Header, Footer, CheckCart, OrderButton },
 };
 </script>
-
-<style scoped></style>

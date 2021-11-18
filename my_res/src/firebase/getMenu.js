@@ -15,7 +15,7 @@ const load = async () => {
     });
 
     // console.log(menu);
-    console.log("We got the data!");
+    // console.log("We got the data!");
   } catch (err) {
     console.log(err);
   }

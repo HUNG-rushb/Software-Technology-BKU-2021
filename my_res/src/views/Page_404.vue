@@ -21,9 +21,9 @@
 
           <h2 class="h1">Có vẻ như trang bạn đang tìm kiếm không tồn tại 💀</h2>
 
-          <router-link class="btn btn-primary" to="/"
-            >Trở về nhà hàng</router-link
-          >
+          <router-link class="btn btn-primary" to="/">
+            Trở về nhà hàng
+          </router-link>
         </div>
       </div>
     </div>
