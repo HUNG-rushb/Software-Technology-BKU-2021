@@ -8,7 +8,7 @@
     >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">
-          Tên món
+          {{ food.name }}
         </h5>
 
         <button
@@ -19,8 +19,10 @@
         ></button>
       </div>
 
+      <img :src="image" />
+
       <div class="offcanvas-body small">
-        Mô tả món ăn
+        {{ food.description }}
       </div>
     </div>
   </div>
@@ -31,20 +33,25 @@ import { inject } from "vue";
 import { Offcanvas } from "bootstrap";
 
 export default {
-  setup() {
+  data() {
+    return {
+      food: {},
+    };
+  },
+  mounted() {
     const emitter = inject("emitter");
 
-    const showDetailsModal = () => {
+    emitter.on("show-food-details", (arg) => {
       var modal = new Offcanvas(document.getElementById("offcanvasBottom"));
       modal.show();
-    };
 
-    emitter.on("show-food-details", () => {
-      showDetailsModal();
+      this.food = arg;
     });
   },
-  data() {
-    return {};
+  computed: {
+    image() {
+      return this.food.image;
+    },
   },
 };
 </script>

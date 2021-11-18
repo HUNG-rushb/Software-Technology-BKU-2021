@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header /> -->
 
     <!-- <HeaderVideo /> -->
 
@@ -10,7 +10,7 @@
 
     <CheckCart />
 
-    <!-- <ReviewFood /> -->
+    <ReviewFood />
 
     <HomeMenu />
 
