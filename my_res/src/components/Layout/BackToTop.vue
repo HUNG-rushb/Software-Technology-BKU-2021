@@ -44,8 +44,8 @@ export default {
 #btn-back-to-top {
   background-color: #9eeeab;
   position: fixed;
-  bottom: 2rem;
-  right: 3rem;
+  bottom: 6rem;
+  right: 0.8rem;
   cursor: pointer;
   border-radius: 10px;
 }

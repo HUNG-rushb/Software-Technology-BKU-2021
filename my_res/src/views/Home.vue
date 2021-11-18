@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header /> -->
 
     <!-- <HeaderVideo /> -->
 
     <OrderButton />
 
-    <!-- <AddToast /> -->
+    <AddToast />
 
     <CheckCart />
 
-    <!-- <ReviewFood /> -->
+    <ReviewFood />
 
     <HomeMenu />
 
@@ -54,5 +54,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

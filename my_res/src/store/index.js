@@ -1,9 +1,9 @@
 import { createStore } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 import menu from "../firebase/getMenu";
 
 const store = createStore({
   state: {
-
     isLoggedIn: false,
     username: "",
 
@@ -132,6 +132,7 @@ const store = createStore({
       return state.username;
     },
   },
+  plugins: [createPersistedState()],
 });
 
 export default store;

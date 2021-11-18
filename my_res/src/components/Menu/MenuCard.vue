@@ -33,22 +33,13 @@ export default {
   setup() {
     const emitter = inject("emitter");
 
-    const addItem = () => {
-      emitter.emit("add-item");
-    };
-
-    const showFoodDetails = () => {
-      emitter.emit("show-food-details");
-    };
-
     return {
-      addItem,
-      showFoodDetails,
+      emitter,
     };
   },
   methods: {
     addItemHandler() {
-      this.addItem();
+      this.emitter.emit("add-item", this.food.name);
 
       this.$store.dispatch("addToCart", {
         id: this.id,
@@ -56,7 +47,7 @@ export default {
     },
 
     foodDetailsHandler() {
-      this.showFoodDetails();
+      this.emitter.emit("show-food-details");
     },
   },
   computed: {
