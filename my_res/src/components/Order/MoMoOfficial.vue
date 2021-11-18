@@ -50,6 +50,7 @@ export default {
       //puts raw signature
       console.log("--------------------RAW SIGNATURE----------------");
       console.log(rawSignature);
+
       //signature
       const crypto = require("crypto");
       var signature = crypto
@@ -74,6 +75,7 @@ export default {
         signature: signature,
         lang: "en",
       });
+
       //Create the HTTPS objects
       const https = require("https");
       const options = {
@@ -86,6 +88,7 @@ export default {
           "Content-Length": Buffer.byteLength(requestBody),
         },
       };
+
       //Send the request and get the response
       const req = https.request(options, (res) => {
         console.log(`Status: ${res.statusCode}`);

@@ -4,11 +4,11 @@
 
     <!-- <HeaderVideo /> -->
 
-    <!-- <OrderButton /> -->
+    <OrderButton />
 
-    <!-- <AddToast /> -->
+    <AddToast />
 
-    <!-- <CheckCart /> -->
+    <CheckCart />
 
     <!-- <ReviewFood /> -->
 
@@ -54,5 +54,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

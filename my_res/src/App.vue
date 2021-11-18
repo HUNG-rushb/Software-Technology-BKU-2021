@@ -11,7 +11,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    this.$ls.set("selectedFood", [], 60 * 60 * 1000);
+  },
+};
 </script>
 
 <style>
