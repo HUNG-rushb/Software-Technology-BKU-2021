@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <Header />
+    <Header />
 
-    <HeaderVideo /> -->
+    <HeaderVideo />
 
     <OrderButton />
 
@@ -16,11 +16,11 @@
 
     <HomeMenu />
 
-    <!-- <GoogleMap />
+    <GoogleMap />
 
     <Footer />
 
-    <ZaloChat /> -->
+    <ZaloChat />
 
     <!-- <UpdateDataFirebase /> -->
   </div>
