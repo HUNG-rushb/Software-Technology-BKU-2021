@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card shadow-lg">
-      <img :src="image" class="card-img-top" alt="..." />
+      <img :src="image" class="card-img-top" />
 
       <div class="card-body">
         <h5 class="card-title">
@@ -47,7 +47,7 @@ export default {
     },
 
     foodDetailsHandler() {
-      this.emitter.emit("show-food-details");
+      this.emitter.emit("show-food-details", this.food);
     },
   },
   computed: {

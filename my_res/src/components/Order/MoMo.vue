@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <button @click="toggleActive">toggle MoMo</button> -->
-    <img @click="toggleActive" src="../../assets/MoMo_Logo.png" />
+    <img @click="toggleActive" src="../../assets/MoMo_Logo.png" id="logo" />
 
     <img v-if="isActive == true" :src="qrCode" id="qr" />
   </div>
@@ -45,6 +45,10 @@ export default {
 img {
   max-height: 10rem;
   max-width: 10rem;
+}
+
+#logo {
+  cursor: pointer;
 }
 
 #qr {
