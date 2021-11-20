@@ -14,21 +14,147 @@
 
     <title>Document</title>
   </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+    body {
+      background-color: #eee;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+    }
+
+    .cart {
+      height: 100vh;
+    }
+
+    .progresses {
+      display: flex;
+      align-items: center;
+    }
+
+    .line {
+      width: 76px;
+      height: 6px;
+      background: #63d19e;
+    }
+
+    .steps {
+      display: flex;
+      background-color: #63d19e;
+      color: #fff;
+      font-size: 12px;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .check1 {
+      display: flex;
+      background-color: #63d19e;
+      color: #fff;
+      font-size: 17px;
+      width: 60px;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .invoice-link {
+      font-size: 15px;
+    }
+
+    .order-button {
+      height: 50px;
+    }
+
+    .background-muted {
+      background-color: #fafafc;
+    }
+  </style>
   <body>
     <!-- .  -->
     <!-- .  -->
     <!-- .  -->
     <!-- .  -->
-    <div
-      class="zalo-chat-widget"
-      data-oaid="579745863508352884"
-      data-welcome-message="Rất vui khi được hỗ trợ bạn!"
-      data-autopopup="0"
-      data-width=""
-      data-height=""
-    ></div>
+    <div class="container mt-4 mb-4">
+      <div class="row d-flex cart align-items-center justify-content-center">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-6 border-right p-5">
+                <div class="text-center order-details">
+                  <div
+                    class="d-flex justify-content-center mb-5 flex-column align-items-center"
+                  >
+                    <span class="check1">
+                      <i class="bi bi-check-lg"></i>
+                    </span>
+                    <span class="font-weight-bold">
+                      Đơn hàng đã được xác nhận!
+                    </span>
+                    <small class="mt-2">
+                      Nhà hàng sẽ phục vụ bạn nhanh nhất có thể
+                    </small>
+                  </div>
+                  <button class="btn btn-danger btn-block order-button">
+                    Go to your Order
+                  </button>
+                </div>
+              </div>
 
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+              <div class="col-md-6 background-muted">
+                <div class="p-3 border-bottom">
+                  <div class="mt-3">
+                    <h6 class="mb-0">Illustraion in Sketch or AI</h6>
+                  </div>
+                </div>
+
+                <div class="row g-0 border-bottom">
+                  <div class="col-md-6">
+                    <div
+                      class="p-3 d-flex justify-content-center align-items-center"
+                    >
+                      <span>Processing fees</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div
+                      class="p-3 d-flex justify-content-center align-items-center"
+                    >
+                      <span>$1.80</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <div
+                      class="p-3 d-flex justify-content-center align-items-center"
+                    >
+                      <span class="font-weight-bold">Tổng cộng</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="p-3 d-flex justify-content-center align-items-center"
+                    >
+                      <span class="font-weight-bold">$61.80</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- -  -->
     <!-- -  -->
