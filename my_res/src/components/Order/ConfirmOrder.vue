@@ -11,7 +11,6 @@
             <span class="text-muted">Giỏ hàng của bạn</span>
             <span class="badge badge-secondary badge-pill"></span>
           </h4>
-          <!-- sticky-md-top -->
           <ul class="list-group mb-3">
             <li
               v-for="food in chosenFoods"
@@ -231,7 +230,7 @@
 
         <div class="col">
           <div class="p-3">
-            <router-link to="/order/confirm" class="btn btn-success">
+            <router-link to="/order/success" class="btn btn-success">
               Đặt hàng
             </router-link>
           </div>
@@ -256,6 +255,7 @@ import VNPay from "./VNPay.vue";
 
 export default {
   components: { Header, Footer, ZaloPay, MoMo, VNPay, MoMoOfficial },
+
   data() {
     return {
       chosenFoods: this.$store.getters.products,
@@ -275,6 +275,7 @@ export default {
       });
     },
   },
+
   setup() {
     var forms = document.getElementsByClassName("needs-validation");
 
@@ -300,10 +301,6 @@ export default {
 </script>
 
 <style scoped>
-/* #invoice {
-  margin-top: 8rem;
-} */
-
 .confirmorder {
   margin-top: 8rem;
   margin-bottom: 8rem;
