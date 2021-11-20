@@ -17,7 +17,7 @@ export default {
   computed: {
     qrCode() {
       const amount = this.$store.getters.totalSum.toString();
-      return "http://momofree.apimienphi.com/api/QRCode?phone=0964407953".concat(
+      return "https://momosv3.apimienphi.com/api/QRCode?phone=0964407953".concat(
         "&amount=",
         amount,
         "& note=",
@@ -48,7 +48,7 @@ img {
 }
 
 #qr {
-  margin-left: 5rem;
+  margin-left: 5 rem;
   max-height: 20rem;
   max-width: 20rem;
 }
