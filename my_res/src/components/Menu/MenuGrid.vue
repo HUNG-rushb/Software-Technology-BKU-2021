@@ -15,13 +15,25 @@
             <i class="bi bi-search"></i>
           </span>
         </div>
+
+        <br />
+        <br />
+
+        <label for="sort" class="left" id="sort_label">Sắp xếp theo: </label>
+        <select id="sort" class="form-select" v-model="sort" name="Sort">
+          <option value="default" class="option" selected>Mặc định</option>
+          <option value="aaa" class="option">Tên: A-Z</option>
+          <option value="zzz" class="option">Tên: Z-A</option>
+          <option value="high" class="option">Giá: Cao-Thấp</option>
+          <option value="low" class="option">Giá: Thấp-Cao</option>
+        </select>
       </div>
 
       <div class="col-md-9">
         <div class="container overflow-hidden">
           <div class="row gy-3">
             <div
-              v-for="item in resultQuery"
+              v-for="item in searchMenu"
               :key="item.id"
               class="col-4"
               data-aos="zoom-in-up"
@@ -44,8 +56,9 @@ export default {
   components: { MenuCard },
   data() {
     return {
-      searchQuery: null,
       menu: getMenu,
+      searchQuery: "",
+      sort: "",
     };
   },
   computed: {
@@ -59,6 +72,26 @@ export default {
         });
       } else {
         return this.menu;
+      }
+    },
+
+    searchMenu() {
+      let foodmenu = this.resultQuery;
+
+      if (this.sort == "high") {
+        return foodmenu.sort(function(a, b) {
+          return b.price - a.price;
+        });
+      } else if (this.sort == "low") {
+        return foodmenu.sort(function(a, b) {
+          return a.price - b.price;
+        });
+      } else if (this.sort == "aaa") {
+        return foodmenu.sort((a, b) => (a.name > b.name ? 1 : -1));
+      } else if (this.sort == "zzz") {
+        return foodmenu.sort((a, b) => (b.name > a.name ? 1 : -1));
+      } else {
+        return foodmenu;
       }
     },
   },

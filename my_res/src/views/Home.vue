@@ -5,19 +5,14 @@
     <HeaderVideo />
 
     <OrderButton />
-
     <AddToast />
-
     <BackToTop />
-
     <CheckCart />
-
     <ReviewFood />
 
     <HomeMenu />
 
     <GoogleMap />
-
     <Footer />
 
     <ZaloChat />
